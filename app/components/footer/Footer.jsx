@@ -44,7 +44,7 @@ const Footer = () => {
              <LazyLoad height={"100%"} once>
                  <Image src={Logo} onClick={()=> router.push(`${mainUrl}`)} alt='ديفا' width={140} style={{marginBottom : '20px'}} priority={true} />
              </LazyLoad>
-          <Typography variant='body1' sx={{color : '#808080', lineHeight : '40px', fontSize : '15px', fontWeight : 700 ,textAlign : 'center'}}>
+          <Typography variant='h1' sx={{lineHeight : '30px', fontSize : '18px', fontWeight : 500 ,textAlign : 'center'}}>
               بإدارة مدام ديفا يسمح لك ديفا بإظهار جمالك الخاص وإطلاق العنان لشخصيتك الفريدة بغض النظر عن عمرك عن طريق إستخدام فن المكياج المحترف. وهو أكثر من مجرد إستخدام منتجات ذات جودة عالية. تتميز منتجات &quot; ديفا &quot; بألوانها الثابتة والأجمل أنها مموجة أي تعطيكي ألوان جديدة ومميزة ولها لمعة مميزة جداً وناعمة جداً على البشرة . مهمتنا هي تشجيعك على إستكشاف جوانب في شخصيتك وجمالك بطرق مختلفة لم تكتشفيها من قبل. لدينا مجموعة كبيرة من الألوان والإستايلات لخلق تأثيرات فريدة من نوعها تبرز جمالك وتعكس شخصيتك.
         </Typography>
           
@@ -58,7 +58,7 @@ const Footer = () => {
                         <ul>
                           <li>
                           <Typography variant='h1' sx={{margin : '25px 0px', fontSize : '25px', fontWeight : 70 , textAlign : 'center'}}>
-                             <Link aria-label={`${item.title}`} href={item.slug} style={{color : '#808080', fontWeight : 500}} >{item.title}</Link>
+                             <Link aria-label={`${item.title}`} href={item.slug} style={{ fontWeight : 500}} >{item.title}</Link>
                           </Typography>
                           </li>
                         </ul>
@@ -77,7 +77,7 @@ const Footer = () => {
                         <ul>
                           <li>
                           <Typography variant='h1' sx={{margin : '25px 0px', fontSize : '25px', fontWeight : 70 , textAlign : 'center'}}>
-                             <Link aria-label={`${item.title}`} href={item.slug} style={{color : '#808080', fontWeight : 500}} >{item.title}</Link>
+                             <Link aria-label={`${item.title}`} href={item.slug} style={{ fontWeight : 500}} >{item.title}</Link>
                           </Typography>
                           </li>
                         </ul>
@@ -94,19 +94,19 @@ const Footer = () => {
             <IconButton aria-label="أتيليه وميك أب أستوديو ديفا" sx={{ color : '#E60263', borderRadius : 0}} size='large'>
                     <PhoneIcon/>
                 </IconButton>
-                        <Link href={'tel:01200001315'} style={{color : '#808080', fontSize : '20px'}} >01200001315</Link>
+                        <Link href={'tel:01200001315'} style={{fontSize : '20px'}} >01200001315</Link>
             </Box>
             <Box sx={{display : 'flex', alignItems : 'center', margin : '25px 0px', borderBottom : '1px solid #ddd', padding : '10px 0px'}}>
             <IconButton aria-label="أتيليه وميك أب أستوديو ديفا" sx={{ color : '#E60263', borderRadius : 0}} size='large'>
                     <EmailIcon/>
                 </IconButton>
-                        <Link href={'https://divaniceatelier@gmail.com'} style={{color : '#808080', fontSize : '20px'}} >divaniceatelier@gmail.com</Link>
+                        <Link href={'https://divaniceatelier@gmail.com'} style={{ fontSize : '20px'}} >divaniceatelier@gmail.com</Link>
             </Box>  
             <Box sx={{display : 'flex', alignItems : 'center', margin : '25px 0px', borderBottom : '1px solid #ddd', padding : '10px 0px'}}>
                 <IconButton aria-label="أتيليه وميك أب أستوديو ديفا" sx={{ color : '#E60263', borderRadius : 0}} size='large'>
                     <LocationOnIcon/>
                 </IconButton>
-                        <Link aria-label='المحلة الكبرى شكري القوتلي اعلى فودافون' href={'اتيليه فساتين زفاف وافراح'} style={{color : '#808080', fontSize : '20px'}} >
+                        <Link aria-label='المحلة الكبرى شكري القوتلي اعلى فودافون' href={'اتيليه فساتين زفاف وافراح'} style={{ fontSize : '20px'}} >
                         المحلة الكبرى شكري القوتلي اعلى فودافون
                         </Link>
             </Box>
