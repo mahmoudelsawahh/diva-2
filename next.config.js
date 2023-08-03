@@ -59,9 +59,9 @@ const nextConfig = {
         ];
       },
       compiler: {
-        // removeConsole: true,
+        removeConsole: true,
       },
-      // reactStrictMode : false,
+      reactStrictMode : false,
       
 } 
 
