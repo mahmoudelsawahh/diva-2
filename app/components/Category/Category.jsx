@@ -62,7 +62,7 @@ const Category = () => {
        <Box sx={{position : 'absolute', width : '100%', height : '100%', backgroundColor : 'rgba(254, 245, 246, .85)',  top : 0 , left : 0  }}></Box>
        <Container maxWidth="lg" sx={{textAlign : 'center', padding : '40px'}}>
         <Slide bottom>
-              <Typography variant='subtitle1' sx={{fontSize : '14px', fontWeight : 'bold' , color : '#E60263', marginTop : '50px'}}>المعرض </Typography>
+              <Typography variant='body1' sx={{fontSize : '14px', fontWeight : 'bold' , color : '#E60263', marginTop : '50px'}}>المعرض </Typography>
               <Typography variant='h1' sx={{fontWeight : 'bold', position : 'relative', fontSize : '2rem', marginBottom : '60px'}} className='underline-service-title' >من اهم مايميزنا هو معرضنا </Typography>
         </Slide>
         <Slide right>

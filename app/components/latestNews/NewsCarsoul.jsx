@@ -36,7 +36,7 @@ const NewsCarsoul = ({data}) => {
                               </CardMedia>
                           <CardContent sx={{height : '200px', overflow : 'hidden', margin : '5px 0px'}}>
                             <Suspense fallback={<Loading/>}>
-                              <div className='api-blog-data' dangerouslySetInnerHTML={{__html: item.description}}/>
+                              {/* <div className='api-blog-data' dangerouslySetInnerHTML={{__html: item.description}}/> */}
                             </Suspense>
                           </CardContent>
                           </CardActionArea>
