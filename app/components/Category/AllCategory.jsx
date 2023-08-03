@@ -35,7 +35,6 @@ const AllCategory = ({CategoryData}) => {
   const [filterData , setFilterData] = useState([]);
   const router = useRouter();
   const slug = usePathname();
-  const resultData = slug === "/" ? filterData.slice(0,6) : filterData
   useEffect(()=>{
     if(CategoryData){
       const weddingData =  CategoryData.filter((item)=> item.catId === 1)
@@ -85,7 +84,7 @@ const AllCategory = ({CategoryData}) => {
   <Grid container spacing={3}>
          <Suspense fallback={<Loading/>}>
          { 
-            resultData.map((item)=>{
+            filterData.map((item)=>{
             return (
               <Grid item xs={12} lg={4} key={item.id}>
            <LazyLoad height={"100%"} once>

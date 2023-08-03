@@ -1,10 +1,10 @@
-import dynamic from "next/dynamic";
+ import dynamic from "next/dynamic";
 import { baseUrl } from "./baseUrl"
 const Loading = dynamic(() => import('@/app/loading'),{
   ssr : false
 });
 export async function getCategoryData() {
-    const res = await fetch(`${baseUrl}/rest/tables.article/getPosts`,{
+    const res = await fetch(`${baseUrl}/rest/tables.article/getAllPosts`,{
       cache : 'no-store',
       headers : {
         "Access-Control-Allow-Headers" : "X-Custom-Header, Upgrade-Insecure-Requests"

@@ -14,7 +14,7 @@
     cursor: pointer;
   }
   header{
-    z-index: 1039;
+    z-index: 1039 !important;
   }
   a{
     text-decoration: none;

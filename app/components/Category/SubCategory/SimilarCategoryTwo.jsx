@@ -33,7 +33,7 @@ const SimilarCategoryTwo = ({data}) => {
                                       <Box sx={{ textAlign : 'center', margin : '0px 40px'}} >
                                           <Image onClick={()=> router.push(`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`)} className='category-slider-photo' 
                                             src={`${baseUrl}/images?id=${item.imageId}`} alt={item.name} layout='fill'/>
-                                            <Link style={{textDecoration : 'underline', fontSize : '20px', textAlign : 'center'}} href={`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`}> {item.name} </Link>
+                                            <Link style={{ fontSize : '20px', textAlign : 'center'}} href={`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`}> {item.name} </Link>
                               </Box>
                                    </LazyLoad>
                                  </div>
