@@ -15,7 +15,6 @@ const Loading = dynamic(() => import('@/app/loading'),{
 
 const NewsCarsoul = ({data}) => {
   const router = useRouter()
-  const dataItems = data.data
   const [emblaRef] = useEmblaCarousel({direction : 'rtl', loop : true },
    [Autoplay({delay : 5000 })]
    )
@@ -25,8 +24,7 @@ const NewsCarsoul = ({data}) => {
         <div className="embla-iframe-video">
     <div className="embla-iframe-video__viewport" ref={emblaRef}>
       <div className="embla-iframe-video__container">
-       <Suspense fallback={<Loading/>}>
-       {dataItems.map((item , id)=>{
+       {data ? data.map((item , id)=>{
             return (
                 <Box className="embla-iframe-video__slide" key={id} sx={{flex : {xs :  '0 0 100%' , md :  '0 0 50%' , lg :  '0 0 33.3%'} }}>
                     <div className='embla-iframe-video__slide__img'>
@@ -52,8 +50,7 @@ const NewsCarsoul = ({data}) => {
                     </div>
                 </Box>
             )
-          })}
-       </Suspense>
+          }) : <Loading/>}
       </div>
     </div>
   </div>

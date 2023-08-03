@@ -14,7 +14,7 @@ const Goals = dynamic(() => import('./components/Goals/Goals'),{
 });
 const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'),{
 });
-const NeswContaner = dynamic(() => import('./components/latestNews/NeswContaner'),{
+const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'),{
   ssr : false
 });
 const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'),{
@@ -54,7 +54,7 @@ export default function Home () {
         <Distinguishes/>
       </section>
       <section>
-       <NeswContaner/>
+       <LatestNews/>
       </section>
       <section>
         <InstagramBanner/>

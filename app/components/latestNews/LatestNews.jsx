@@ -5,14 +5,27 @@ import divaBg from '/public/divanice.com_imgs_section-bg.webp'
 import waveBg from '/public/divanice.com_imgs_waves.png'
 import LazyLoad from 'react-lazyload';
 import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
+import { Suspense, useEffect, useState } from 'react';
+import { baseUrl } from '@/app/lib/baseUrl';
 const NewsCarsoul = dynamic(() => import('./NewsCarsoul'),{
    ssr : false
  });
  const Loading = dynamic(() => import('@/app/loading'),{
   ssr : false
 });
-const LatestNews = ({data}) => {
+
+const LatestNews = () => {
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+    fetch(`${baseUrl}/rest/tables.article/getArticlesPojo`)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data.data)
+      })
+  }, [])
+
+
   return (
         <Box sx={{position : 'relative', height : '100%'}}>
          <LazyLoad height={"100%"} once>
@@ -29,9 +42,7 @@ const LatestNews = ({data}) => {
               <Typography variant='h1' sx={{fontWeight : 'bold', position : 'relative', fontSize : '2rem', marginBottom : '60px'}} className='underline-service-title'  >احدث اخبار الموضة والجمال</Typography>
         </Slide>
        <Box>
-           <Suspense fallback={<Loading/>}>
                 <NewsCarsoul data={data}/>
-           </Suspense>
        </Box>
     </Container>
         <LazyLoad height={'100%'} once>
