@@ -54,7 +54,7 @@ export default function Home () {
         <Distinguishes/>
       </section>
       <section>
-       {/* <NeswContaner/> */}
+       <NeswContaner/>
       </section>
       <section>
         <InstagramBanner/>
