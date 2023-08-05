@@ -1,5 +1,5 @@
 "use client"
-import {  Button, CardActionArea, CardActions, Card , CardContent , CardMedia, Container, Box } from '@/app/lib/MuiSsr';
+import {  Button, CardActionArea, CardActions, Card , CardContent , CardMedia, Container, Box, Typography } from '@/app/lib/MuiSsr';
 import Image from 'next/image';
 import { baseUrl } from '@/app/lib/baseUrl';
 import { useRouter } from "next/navigation";
@@ -20,7 +20,7 @@ const NewsCarsoul = ({data}) => {
    )
 
   return (
-    <Container maxWidth="lg" sx={{marginBottom : '80px'}}>
+    <Container maxWidth="lg">
         <div className="embla-iframe-video">
     <div className="embla-iframe-video__viewport" ref={emblaRef}>
       <div className="embla-iframe-video__container">
@@ -34,9 +34,9 @@ const NewsCarsoul = ({data}) => {
                               <CardMedia >
                                   <Image  src={`${baseUrl}/images?id=${item.imageId}`} height={200} width={250} alt={item.name} style={{ objectFit: 'cover', width : "100%" }} loading='lazy' />
                               </CardMedia>
-                          <CardContent sx={{height : '200px', overflow : 'hidden', margin : '5px 0px'}}>
+                          <CardContent sx={{minHeight : '80px'}}>
                             <Suspense fallback={<Loading/>}>
-                              <div className='api-blog-data' dangerouslySetInnerHTML={{__html: item.description}}/>
+                              <Typography variant='h1' sx={{fontSize : '22px', fontWeight : 'bold'}}>{item.name}</Typography>
                             </Suspense>
                           </CardContent>
                           </CardActionArea>

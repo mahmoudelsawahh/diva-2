@@ -148,6 +148,12 @@
     background-color: #E60263;
   
 }
+/* ------------------- Category --------------------------*/
+.category-list{
+  margin: 0 auto;
+  width: auto !important;
+  max-width: 100% !important;
+}
 /* ------------------- Deva Iframe Youtube --------------------------*/
 
 .embla-iframe-video {
@@ -232,3 +238,10 @@ text-align: end !important;
   height: 4px;
   background-color: var(--secondary-color);
 }
+
+
+/* -------------------------------------------------- */
+
+
+
+

@@ -1,7 +1,7 @@
 "use client"
 import './globals.css'
 import { createCache , CacheProvider, ThemeProvider , CssBaseline, createTheme  } from '@/app/lib/MuiSsr';
-import { Cairo } from 'next/font/google';
+// import { Cairo } from 'next/font/google';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { prefixer } from 'stylis';
 import { Suspense, useEffect, useState } from 'react';
@@ -24,7 +24,7 @@ const cache = createCache({
 
 const theme = createTheme({
   typography : {
-    fontFamily : cairo.style.fontFamily
+    // fontFamily : cairo.style.fontFamily
   },
   palette: {
     primary : {
@@ -38,10 +38,10 @@ const theme = createTheme({
   
 })
 
- const cairo = Cairo({ 
-    subsets: ['latin'] ,
-    display : 'swap',
-  })
+//  const cairo = Cairo({ 
+//     subsets: ['latin'] ,
+//     display : 'swap',
+//   })
 
 export default function RootLayout({ children }) {
   const [loadingComponent , setLoadingComponent] = useState(true);
@@ -79,7 +79,9 @@ export default function RootLayout({ children }) {
       <meta name="twitter:domain" content="divanice" />
       <meta name="twitter:creator" content="@divanice" />
      </head>
-      <body className={cairo.className}>
+      <body
+      //  className={cairo.className}
+       >
       {loadingComponent ? <Loading/> : 
       <CacheProvider value={cache}>
       <ThemeProvider theme={theme}>

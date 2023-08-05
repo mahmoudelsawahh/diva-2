@@ -62,7 +62,7 @@ const nextConfig = {
         removeConsole: true,
       },
       reactStrictMode : false,
-      
+            
 } 
 
 module.exports = nextConfig
