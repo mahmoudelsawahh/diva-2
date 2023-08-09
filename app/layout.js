@@ -4,8 +4,7 @@ const Loading = dynamic(() => import('@/app/loading'),{
   ssr : false,
 });
 const LayoutContainer = dynamic(() => import('./components/layoutContaner'),{
-  ssr : false,
-  // loading : ()=> <Loading/>
+
 
 });
 
