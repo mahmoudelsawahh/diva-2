@@ -20,6 +20,7 @@ const cache = createCache({
 
 const theme = createTheme({
   typography : {
+    fontFamily : cairo.style.fontFamily
   },
   palette: {
     primary : {
@@ -57,8 +58,7 @@ export default function LayoutContainer({ children }) {
            <nav>
              <DrawerAppBar/>
           </nav>
-            {children}
-                <SocialFooter/>
+          <SocialFooter/>
            </>
       </ThemeProvider>
     </CacheProvider>
