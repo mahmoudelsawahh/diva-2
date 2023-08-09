@@ -58,8 +58,8 @@ export default function LayoutContainer({ children }) {
            {/* <nav>
              <DrawerAppBar/>
           </nav> */}
-            {/* {children}
-                <SocialFooter/> */}
+            {children}
+                {/* <SocialFooter/> */}
            </>
       </ThemeProvider>
     </CacheProvider>
