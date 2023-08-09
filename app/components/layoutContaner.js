@@ -1,6 +1,6 @@
 "use client"
 import { createCache , CacheProvider, ThemeProvider , CssBaseline, createTheme  } from '@/app/lib/MuiSsr';
-// import { Cairo } from 'next/font/google';
+import { Cairo } from 'next/font/google';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { prefixer } from 'stylis';
 import { Suspense, useEffect } from 'react';
@@ -9,13 +9,13 @@ import LazyLoad from 'react-lazyload';
 const Loading = dynamic(() => import('@/app/loading'),{
   ssr : false
 });
-const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
-  ssr : false
-});
+// const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
+//   ssr : false
+// });
 
-const SocialFooter = dynamic(() => import('./footer/SocialFooter'),{
-  ssr : false
-});
+// const SocialFooter = dynamic(() => import('./footer/SocialFooter'),{
+//   ssr : false
+// });
 const cache = createCache({
   key: 'css',
   prepend: true,
@@ -24,7 +24,7 @@ const cache = createCache({
 
 const theme = createTheme({
   typography : {
-    // fontFamily : cairo.style.fontFamily
+    fontFamily : cairo.style.fontFamily
   },
   palette: {
     primary : {
@@ -38,11 +38,11 @@ const theme = createTheme({
   
 })
 
-//  const cairo = Cairo({ 
-//     subsets: ['latin'] ,
-//     display : 'swap',
-//     preload : true
-//   })
+ const cairo = Cairo({ 
+    subsets: ['latin'] ,
+    display : 'swap',
+    preload : true
+  })
 
 export default function LayoutContainer({ children }) {
   useEffect(()=>{
@@ -53,21 +53,21 @@ export default function LayoutContainer({ children }) {
   },[])
   return (
       <div
-    //    className={cairo.className}
+       className={cairo.className}
        >
       <CacheProvider value={cache}>
       <ThemeProvider theme={theme}>
       <CssBaseline/>
            <>
            <nav>
-             <DrawerAppBar/>
+             {/* <DrawerAppBar/> */}
           </nav>
            <Suspense fallback={<Loading/>}>
             {children}
            </Suspense>
-           <LazyLoad height={"100%"} once offset={1000}>
+           {/* <LazyLoad height={"100%"} once offset={1000}>
                 <SocialFooter/>
-           </LazyLoad>
+           </LazyLoad> */}
            </>
       </ThemeProvider>
     </CacheProvider>
