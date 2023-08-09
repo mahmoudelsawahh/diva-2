@@ -73,7 +73,7 @@
   height: 100%;
   flex-direction: column;
   color: #fff !important;
-  background-color: #00000073;
+  background-color: none !important;
   position: absolute;
   width: 100%;
 }
