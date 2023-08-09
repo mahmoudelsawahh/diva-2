@@ -1,5 +1,8 @@
-"use client"
 import './globals.css'
+import dynamic from "next/dynamic";
+const LayoutContainer = dynamic(() => import('./components/layoutContaner'),{
+  ssr : false,
+});
 
 export default function RootLayout({ children }) {
   return (
@@ -33,10 +36,10 @@ export default function RootLayout({ children }) {
       <meta name="twitter:domain" content="divanice" />
       <meta name="twitter:creator" content="@divanice" />
      </head>
-      <body
-      //  className={cairo.className}
-       >
-        {children}
+      <body>
+      <LayoutContainer>
+         {children}
+      </LayoutContainer>
       </body>
     </html>
   )
