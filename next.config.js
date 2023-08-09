@@ -41,23 +41,23 @@ const nextConfig = {
       imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
       formats: ['image/webp'],
   },
-    modularizeImports: {
-        "@mui/material/?(((\\w*)?/?)*)": {
-          transform: "@mui/material/{{ matches.[1] }}/{{member}}",
-        },
-        "@mui/icons-material/?(((\\w*)?/?)*)": {
-          transform: "@mui/icons-material/{{ matches.[1] }}/{{member}}",
-        },
-      },
-      async headers() {
-        return [
-          {
-            // Apply these headers to all routes in your application.
-            source: "/:path*",
-            headers: advancedHeaders,
-          },
-        ];
-      },
+    // modularizeImports: {
+    //     "@mui/material/?(((\\w*)?/?)*)": {
+    //       transform: "@mui/material/{{ matches.[1] }}/{{member}}",
+    //     },
+    //     "@mui/icons-material/?(((\\w*)?/?)*)": {
+    //       transform: "@mui/icons-material/{{ matches.[1] }}/{{member}}",
+    //     },
+    //   },
+    //   async headers() {
+    //     return [
+    //       {
+    //         // Apply these headers to all routes in your application.
+    //         source: "/:path*",
+    //         headers: advancedHeaders,
+    //       },
+    //     ];
+    //   },
       compiler: {
         removeConsole: true,
       },
