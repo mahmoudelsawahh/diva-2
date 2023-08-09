@@ -6,9 +6,9 @@ import { prefixer } from 'stylis';
 import { Suspense, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import LazyLoad from 'react-lazyload';
-const Loading = dynamic(() => import('@/app/loading'),{
-  ssr : false
-});
+// const Loading = dynamic(() => import('@/app/loading'),{
+//   ssr : false
+// });
 const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
   ssr : false
 });
@@ -62,9 +62,7 @@ export default function LayoutContainer({ children }) {
            <nav>
              <DrawerAppBar/>
           </nav>
-           <Suspense fallback={<Loading/>}>
             {children}
-           </Suspense>
            <LazyLoad height={"100%"} once offset={1000}>
                 <SocialFooter/>
            </LazyLoad>
