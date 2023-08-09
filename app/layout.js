@@ -1,7 +1,8 @@
+import LayoutContainer from './components/layoutContaner';
 import './globals.css'
 import dynamic from "next/dynamic";
-const LayoutContainer = dynamic(() => import('./components/layoutContaner'),{
-});
+// const LayoutContainer = dynamic(() => import('./components/layoutContaner'),{
+// });
 
 export default function RootLayout({ children }) {
   return (
