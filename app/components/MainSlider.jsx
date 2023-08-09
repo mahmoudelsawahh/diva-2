@@ -45,7 +45,14 @@ const MainSlider = () => {
   //     </div>
   //   </div>
   // </div>
-   <div style={{height : '100vh'}}></div>
+   <div >
+     <Image
+              src={firstBg}
+              layout='responsive'
+              alt="أتيليه وميك أب أستوديو ديفا"
+              loading='lazy'
+      />
+   </div>
     )
 }
 
