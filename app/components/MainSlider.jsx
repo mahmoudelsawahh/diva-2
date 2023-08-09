@@ -49,6 +49,7 @@ const MainSlider = () => {
      <Image
               src={firstBg}
               layout='responsive'
+              className="embla__slide__img"
               alt="أتيليه وميك أب أستوديو ديفا"
               loading='lazy'
       />
