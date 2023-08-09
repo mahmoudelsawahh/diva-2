@@ -1,12 +1,8 @@
 import './globals.css'
 import dynamic from "next/dynamic";
-const Loading = dynamic(() => import('@/app/loading'),{
-  ssr : false,
-});
 const LayoutContainer = dynamic(() => import('./components/layoutContaner'),{
   ssr : false,
-  loading : ()=> <Loading/>
-
+  loading : ()=> <h1 style={{height : '100vh'}}>loading...</h1>
 });
 
 export default function RootLayout({ children }) {
