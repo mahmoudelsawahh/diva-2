@@ -22,25 +22,28 @@ const MainSlider = () => {
 			        <Typography sx={{fontSize : "2.3rem" , fontWeight : 'bold', marginBottom : '12px', textAlign : 'center'}}>أكبر أتيليه وميك أب ستوديو في المحلة الكبرى</Typography>
 			        <Typography variant='body1' sx={{fontSize : {xs : '20ox', md : '25px'}, textAlign : 'center'}}>مرحباً بكم في &quot; ديفا &quot; أتيليه وميك أب أستوديو</Typography>
 		      	</div>
-            <Image
+            {/* <Image
               className="embla__slide__img"
               src={firstBg}
               layout='responsive'
               alt="أتيليه وميك أب أستوديو ديفا"
               loading='lazy'
-            />
+            /> */}
+            <div style={{height : '100vh'}}></div>
+
           </div>
           <div className="embla__slide">
           <div className="slide-content">  
 			         <Typography sx={{fontSize : "2.5rem" , fontWeight : 'bold', margin : '12px', textAlign : 'center'}}>نحن فخورون بتقديم خدماتنا للنساء في المحلة الكبرى بشكل خاص وجمهورية مصر العربية بشكل عام</Typography>
 	    		</div>
-            <Image
+            {/* <Image
               className="embla__slide__img"
               src={secondBg}
               alt="أتيليه وميك أب أستوديو ديفا"
               layout='responsive'
               loading='lazy'
-            />
+            /> */}
+            <div style={{height : '100vh'}}></div>
           </div>
       </div>
     </div>
