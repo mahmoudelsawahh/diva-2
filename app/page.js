@@ -5,7 +5,7 @@ const Distinguishes = dynamic(() => import('./components/Distinguishes/Distingui
 });
 const MainSlider = dynamic(() => import('./components/MainSlider'),{
   ssr : false,
-  loading : ()=> <h1 style={{height : '100vh'}}>loading</h1>
+  loading : ()=> <Loading/>
 });
 const AboutUs = dynamic(() => import('./components/about-homePage/AboutUs'),{
   ssr : false,

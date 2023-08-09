@@ -62,7 +62,7 @@ export default function LayoutContainer({ children }) {
            <nav>
              <DrawerAppBar/>
           </nav>
-           <Suspense fallback={<h1 style={{height : '100vh'}}>ss</h1>}>
+           <Suspense fallback={<Loading/>}>
             {children}
            </Suspense>
            <LazyLoad height={"100%"} once offset={1000}>
