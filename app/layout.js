@@ -42,6 +42,7 @@ const theme = createTheme({
  const cairo = Cairo({ 
     subsets: ['latin'] ,
     display : 'swap',
+    preload : true
   })
 
 export default function RootLayout({ children }) {
