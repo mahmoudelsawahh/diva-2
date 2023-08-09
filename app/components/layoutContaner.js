@@ -42,11 +42,17 @@ const theme = createTheme({
   })
 
 export default function LayoutContainer({ children }) {
-
+  // useEffect(()=>{
+  //     window.addEventListener('scroll', () => {}, { passive: true })
+  //     return () => {
+  //       window.removeEventListener('scroll', () => {})
+  //     }
+  // },[])
   return (
       <div
        className={cairo.className}
        >
+      <CacheProvider value={cache}>
       <ThemeProvider theme={theme}>
       <CssBaseline/>
            <>
@@ -59,6 +65,7 @@ export default function LayoutContainer({ children }) {
            </LazyLoad>
            </>
       </ThemeProvider>
+    </CacheProvider>
       </div>
   )
 }
