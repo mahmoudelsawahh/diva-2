@@ -1,8 +1,5 @@
 import './globals.css'
 import dynamic from "next/dynamic";
-const Loading = dynamic(() => import('@/app/loading'),{
-  ssr : false,
-});
 const LayoutContainer = dynamic(() => import('./components/layoutContaner'),{
   ssr : false,
   loading : ()=> <h1 style={{height : '100%'}}>loading</h1>
