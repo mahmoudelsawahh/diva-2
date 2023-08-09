@@ -9,9 +9,9 @@ const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
   ssr : false,
 });
 
-const SocialFooter = dynamic(() => import('./footer/SocialFooter'),{
-  ssr : false
-});
+// const SocialFooter = dynamic(() => import('./footer/SocialFooter'),{
+//   ssr : false
+// });
 const cache = createCache({
   key: 'css',
   prepend: true,
@@ -58,7 +58,8 @@ export default function LayoutContainer({ children }) {
            <nav>
              <DrawerAppBar/>
           </nav>
-          <SocialFooter/>
+            {/* {children}
+                <SocialFooter/> */}
            </>
       </ThemeProvider>
     </CacheProvider>
