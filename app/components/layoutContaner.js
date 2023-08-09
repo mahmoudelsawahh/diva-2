@@ -20,7 +20,7 @@ const cache = createCache({
 
 const theme = createTheme({
   typography : {
-    fontFamily : cairo.style.fontFamily
+    // fontFamily : cairo.style.fontFamily
   },
   palette: {
     primary : {
