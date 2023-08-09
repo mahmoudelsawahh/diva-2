@@ -1,5 +1,5 @@
 "use client"
-import Logo from '/public/diva-logo.png'
+// import Logo from '/public/diva-logo.png'
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -67,7 +67,7 @@ export default function DrawerAppBar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
                 <div>
                   <div style={{position : 'relative', padding : '10px 60px'}}>
-                  <Image priority={true} layout="responsive" onClick={()=> router.push(`/`)} style={{width : '100%',}} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
+                  {/* <Image priority={true} layout="responsive" onClick={()=> router.push(`/`)} style={{width : '100%',}} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/> */}
                   </div>
                  </div>
      <Divider />
@@ -100,7 +100,7 @@ export default function DrawerAppBar(props) {
          <Box sx={{ flexGrow: 1 , display: { xs: 'flex', sm: 'block' }, justifyContent : 'flex-start' ,  cursor : 'pointer'
           }}>
                  <div style={{width : '90px', position : 'relative', height : '76px', padding : '5px'}}>
-                 <Image priority={true} layout="responsive" onClick={()=> router.push(`/`)} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
+                 {/* <Image priority={true} layout="responsive" onClick={()=> router.push(`/`)} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/> */}
                  </div>
          </Box>
 
