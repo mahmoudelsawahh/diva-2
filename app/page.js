@@ -1,11 +1,9 @@
 import dynamic from 'next/dynamic';
-import Loading from './loading';
 const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'),{
   ssr : false,
 });
 const MainSlider = dynamic(() => import('./components/MainSlider'),{
   ssr : false,
-  loading : ()=> <Loading/>
 });
 const AboutUs = dynamic(() => import('./components/about-homePage/AboutUs'),{
   ssr : false,

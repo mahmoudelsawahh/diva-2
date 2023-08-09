@@ -2,13 +2,10 @@
 import { createCache , CacheProvider, ThemeProvider , CssBaseline, createTheme  } from '@/app/lib/MuiSsr';
 import { Cairo } from 'next/font/google';
 import rtlPlugin from 'stylis-plugin-rtl';
-import { prefixer } from 'stylis';
-import { Suspense, useEffect } from 'react';
+import {useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import LazyLoad from 'react-lazyload';
-// const Loading = dynamic(() => import('@/app/loading'),{
-//   ssr : false
-// });
+
 const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
   ssr : false
 });
@@ -19,7 +16,7 @@ const SocialFooter = dynamic(() => import('./footer/SocialFooter'),{
 const cache = createCache({
   key: 'css',
   prepend: true,
-  stylisPlugins: [prefixer, rtlPlugin],
+  stylisPlugins: [rtlPlugin],
 });
 
 const theme = createTheme({
