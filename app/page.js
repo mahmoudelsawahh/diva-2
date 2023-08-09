@@ -1,9 +1,11 @@
 import dynamic from 'next/dynamic';
+import Loading from './loading';
 const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'),{
   ssr : false,
 });
 const MainSlider = dynamic(() => import('./components/MainSlider'),{
   ssr : false,
+  loading : ()=> <h1 style={{height : '100vh'}}>loading</h1>
 });
 const AboutUs = dynamic(() => import('./components/about-homePage/AboutUs'),{
   ssr : false,
