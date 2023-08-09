@@ -42,12 +42,12 @@ const theme = createTheme({
   })
 
 export default function LayoutContainer({ children }) {
-  useEffect(()=>{
-      window.addEventListener('scroll', () => {}, { passive: true })
-      return () => {
-        window.removeEventListener('scroll', () => {})
-      }
-  },[])
+  // useEffect(()=>{
+  //     window.addEventListener('scroll', () => {}, { passive: true })
+  //     return () => {
+  //       window.removeEventListener('scroll', () => {})
+  //     }
+  // },[])
   return (
       <div
        className={cairo.className}
@@ -60,9 +60,9 @@ export default function LayoutContainer({ children }) {
              <DrawerAppBar/>
           </nav>
             {children}
-           <LazyLoad height={"100%"} once offset={1000}>
+           {/* <LazyLoad height={"100%"} once offset={1000}>
                 <SocialFooter/>
-           </LazyLoad>
+           </LazyLoad> */}
            </>
       </ThemeProvider>
     </CacheProvider>
