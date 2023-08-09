@@ -4,8 +4,8 @@ const Loading = dynamic(() => import('@/app/loading'),{
   ssr : false,
 });
 const LayoutContainer = dynamic(() => import('./components/layoutContaner'),{
-
-
+  ssr : false,
+  loading : ()=> <h1 style={{height : '100%'}}>loading</h1>
 });
 
 export default function RootLayout({ children }) {
