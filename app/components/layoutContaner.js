@@ -3,11 +3,11 @@ import { createCache , CacheProvider, ThemeProvider , CssBaseline, createTheme  
 import { Cairo } from 'next/font/google';
 import rtlPlugin from 'stylis-plugin-rtl';
 // import {useEffect } from 'react';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 
-const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
-  ssr : false,
-});
+// const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
+//   ssr : false,
+// });
 
 // const SocialFooter = dynamic(() => import('./footer/SocialFooter'),{
 //   ssr : false
@@ -55,9 +55,9 @@ export default function LayoutContainer({ children }) {
       <ThemeProvider theme={theme}>
       <CssBaseline/>
            <>
-           <nav>
+           {/* <nav>
              <DrawerAppBar/>
-          </nav>
+          </nav> */}
             {/* {children}
                 <SocialFooter/> */}
            </>
