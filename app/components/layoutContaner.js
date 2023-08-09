@@ -2,11 +2,12 @@
 import { createCache , CacheProvider, ThemeProvider , CssBaseline, createTheme  } from '@/app/lib/MuiSsr';
 import { Cairo } from 'next/font/google';
 import rtlPlugin from 'stylis-plugin-rtl';
+import {useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import LazyLoad from 'react-lazyload';
 
 const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
-  ssr : false,
+  ssr : false
 });
 
 const SocialFooter = dynamic(() => import('./footer/SocialFooter'),{
@@ -41,12 +42,12 @@ const theme = createTheme({
   })
 
 export default function LayoutContainer({ children }) {
-  // useEffect(()=>{
-  //     window.addEventListener('scroll', () => {}, { passive: true })
-  //     return () => {
-  //       window.removeEventListener('scroll', () => {})
-  //     }
-  // },[])
+  useEffect(()=>{
+      window.addEventListener('scroll', () => {}, { passive: true })
+      return () => {
+        window.removeEventListener('scroll', () => {})
+      }
+  },[])
   return (
       <div
        className={cairo.className}
