@@ -8,7 +8,13 @@ const port = 3011
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
- 
+
+
+app.use(express.static('public', {
+  maxAge: '1y', // Set the cache-control header to 1 year
+}))
+
+
 app.prepare().then(() => {
   createServer(async (req, res) => {
     try {

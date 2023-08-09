@@ -51,6 +51,7 @@ export default function DrawerAppBar(props) {
              className={currentRoute === "/" ? "active" : "no-active"  }
              title={item.title}
             style={{fontWeight : 'bold' , margin : '10px 20px', fontSize : '18px'}}
+            prefetch={false}
              >
                     {item.title} 
                    </Link>   

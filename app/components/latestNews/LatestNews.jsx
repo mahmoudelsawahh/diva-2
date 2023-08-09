@@ -8,11 +8,9 @@ import dynamic from 'next/dynamic';
 import { Suspense, useEffect, useState } from 'react';
 import { baseUrl } from '@/app/lib/baseUrl';
 const NewsCarsoul = dynamic(() => import('./NewsCarsoul'),{
-   ssr : false
+  ssr : false,
+  loading: () => <div>Loading...</div>
  });
- const Loading = dynamic(() => import('@/app/loading'),{
-  ssr : false
-});
 
 const LatestNews = () => {
   const [data, setData] = useState(null)

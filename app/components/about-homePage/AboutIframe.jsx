@@ -5,7 +5,6 @@ import LazyLoad from 'react-lazyload';
 
 const AboutIframe = () => {
   const router = useRouter();
-
   return (
         <Box sx={{display : 'flex', flexDirection : 'column' , alignItems : 'center', justifyContent : 'center'}}>
         <Typography variant='h2' sx={{color : '#E60263', fontSize : '2rem', fontWeight : 500}}>الصفحة الرسمية لميك اب واتيليه ديفا</Typography>

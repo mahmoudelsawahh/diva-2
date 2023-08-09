@@ -2,7 +2,10 @@
 import { Fade, Container, Grid } from '@/app/lib/MuiSsr';
 import dynamic from 'next/dynamic';
 import WhyUs from './whyUs';
-const AboutIframe = dynamic(() => import('./AboutIframe'));
+const AboutIframe = dynamic(() => import('./AboutIframe'),{
+  ssr : false,
+  loading: () => <div>Loading...</div>
+});
 
 const AboutUs = () => {
 

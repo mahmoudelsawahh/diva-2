@@ -5,7 +5,8 @@ import bgDiva from "/public/divanice.com_imgs_video-background.webp"
 import dynamic from 'next/dynamic';
 import LazyLoad from 'react-lazyload';
 const DevaIframe = dynamic(() => import('./DevaIframe'),{
-  ssr : false
+  ssr : false,
+  loading: () => <div>Loading...</div>
 });
 
 const DevaStudioVideo = () => {

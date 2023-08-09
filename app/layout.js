@@ -1,7 +1,7 @@
 "use client"
 import './globals.css'
 import { createCache , CacheProvider, ThemeProvider , CssBaseline, createTheme  } from '@/app/lib/MuiSsr';
-// import { Cairo } from 'next/font/google';
+import { Cairo } from 'next/font/google';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { prefixer } from 'stylis';
 import { Suspense, useEffect, useState } from 'react';
@@ -15,6 +15,7 @@ const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
 });
 
 const SocialFooter = dynamic(() => import('./components/footer/SocialFooter'),{
+  ssr : false
 });
 const cache = createCache({
   key: 'css',
@@ -24,7 +25,7 @@ const cache = createCache({
 
 const theme = createTheme({
   typography : {
-    // fontFamily : cairo.style.fontFamily
+    fontFamily : cairo.style.fontFamily
   },
   palette: {
     primary : {
@@ -38,15 +39,19 @@ const theme = createTheme({
   
 })
 
-//  const cairo = Cairo({ 
-//     subsets: ['latin'] ,
-//     display : 'swap',
-//   })
+ const cairo = Cairo({ 
+    subsets: ['latin'] ,
+    display : 'swap',
+  })
 
 export default function RootLayout({ children }) {
   const [loadingComponent , setLoadingComponent] = useState(true);
   useEffect(()=>{
       setLoadingComponent(false)
+      window.addEventListener('scroll', () => {}, { passive: true })
+      return () => {
+        window.removeEventListener('scroll', () => {})
+      }
   },[])
   return (
     <html dir="rtl" lang='ar'>
@@ -80,7 +85,7 @@ export default function RootLayout({ children }) {
       <meta name="twitter:creator" content="@divanice" />
      </head>
       <body
-      //  className={cairo.className}
+       className={cairo.className}
        >
       {loadingComponent ? <Loading/> : 
       <CacheProvider value={cache}>

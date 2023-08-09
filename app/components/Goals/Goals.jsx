@@ -1,7 +1,10 @@
 "use client"
 import { Fade , Reveal , Container, Grid, Typography} from '@/app/lib/MuiSsr';
 import dynamic from 'next/dynamic';
-const RightGoals = dynamic(() => import('./RightGoals'));
+const RightGoals = dynamic(() => import('./RightGoals'),{
+  ssr : false,
+  loading: () => <div>Loading...</div>
+});
 
 const Goals = () => {
   return (
