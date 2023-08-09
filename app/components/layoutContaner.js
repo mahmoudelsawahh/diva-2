@@ -3,12 +3,12 @@ import { createCache , CacheProvider, ThemeProvider , CssBaseline, createTheme  
 import { Cairo } from 'next/font/google';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { prefixer } from 'stylis';
-import {useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import LazyLoad from 'react-lazyload';
-// const Loading = dynamic(() => import('@/app/loading'),{
-//   ssr : false
-// });
+const Loading = dynamic(() => import('@/app/loading'),{
+  ssr : false
+});
 const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
   ssr : false
 });
@@ -62,7 +62,9 @@ export default function LayoutContainer({ children }) {
            <nav>
              <DrawerAppBar/>
           </nav>
+           <Suspense fallback={<h1 style={{height : '100vh'}}>ss</h1>}>
             {children}
+           </Suspense>
            <LazyLoad height={"100%"} once offset={1000}>
                 <SocialFooter/>
            </LazyLoad>
