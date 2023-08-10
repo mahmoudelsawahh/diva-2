@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
 
-const Distinguishes = dynamic(() => import('./components/Distinguishes/Distinguishes'),{
+const Distinguishes = dynamic(() => import('./Distinguishes/Distinguishes'),{
   ssr : false,
 });
-const AboutUs = dynamic(() => import('./components/about-homePage/AboutUs'),{
+const AboutUs = dynamic(() => import('./about-homePage/AboutUs'),{
   ssr : false,
 });
 const Service = dynamic(() => import('./Service/Service'),{
