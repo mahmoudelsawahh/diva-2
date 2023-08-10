@@ -1,6 +1,6 @@
 "use client"
 import { createCache , CacheProvider, ThemeProvider , CssBaseline, createTheme  } from '@/app/lib/MuiSsr';
-// import { Cairo } from 'next/font/google';
+import { Cairo } from 'next/font/google';
 import rtlPlugin from 'stylis-plugin-rtl';
 import dynamic from 'next/dynamic';
 import LazyLoad from 'react-lazyload';
@@ -20,7 +20,7 @@ const cache = createCache({
 
 const theme = createTheme({
   typography : {
-    // fontFamily : cairo.style.fontFamily
+    fontFamily : cairo.style.fontFamily
   },
   palette: {
     primary : {
@@ -34,16 +34,16 @@ const theme = createTheme({
   
 })
 
-//  const cairo = Cairo({ 
-//     subsets: ['latin'] ,
-//     display : 'swap',
-//     preload : true
-//   })
+ const cairo = Cairo({ 
+    subsets: ['latin'] ,
+    display : 'swap',
+    preload : true
+  })
 
 export default function LayoutContainer({ children }) {
   return (
       <div
-      //  className={cairo.className}
+       className={cairo.className}
        >
       <CacheProvider value={cache}>
       <ThemeProvider theme={theme}>
