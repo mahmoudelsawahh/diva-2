@@ -6,12 +6,8 @@ import firstBg from '/public/divanice.com_imgs_diva2.webp'
 import secondBg from '/public/divanice.com_imgs_diva3.webp'
 import { Typography } from '@/app/lib/MuiSsr'
 import dynamic from 'next/dynamic'
-const Loading = dynamic(() => import('@/app/loading'),{
-  ssr : false,
-});
 const MainPage = dynamic(() => import('./MainPage'),{
     ssr : false,
-    loading : ()=> <Loading/>
   });
 
 

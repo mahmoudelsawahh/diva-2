@@ -1,3 +1,4 @@
+"use client"
 import dynamic from 'next/dynamic';
 const MainSlider = dynamic(() => import('./components/MainSlider'),{
   ssr : false,
