@@ -6,22 +6,22 @@ const Distinguishes = dynamic(() => import('./components/Distinguishes/Distingui
 const AboutUs = dynamic(() => import('./components/about-homePage/AboutUs'),{
   ssr : false,
 });
-const Service = dynamic(() => import('./components/Service/Service'),{
+const Service = dynamic(() => import('./Service/Service'),{
   ssr : false,
 });
-const Goals = dynamic(() => import('./components/Goals/Goals'),{
+const Goals = dynamic(() => import('./Goals/Goals'),{
   ssr : false,
 });
-const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'),{
+const DevaStudioVideo = dynamic(() => import('./DevaStudioVideo/DevaStudioVideo'),{
   ssr : false,
 });
-const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'),{
+const LatestNews = dynamic(() => import('./latestNews/LatestNews'),{
   ssr : false,
 });
-const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'),{
+const InstagramBanner = dynamic(() => import('./InstagramBanner/InstagramBanner'),{
   ssr : false,
 });
-const Category = dynamic(() => import('./components/Category/Category'),{
+const Category = dynamic(() => import('./Category/Category'),{
   ssr : false,
 });
 const MainPage = () => {
