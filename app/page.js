@@ -28,9 +28,9 @@ const MainSlider = dynamic(() => import('./components/MainSlider'),{
 //   ssr : false,
 // });
 
-// const Footer = dynamic(() => import('./components/footer/Footer'),{
-//   ssr : false,
-// });
+const Footer = dynamic(() => import('./components/footer/Footer'),{
+  ssr : false,
+});
 
 export const metadata = {
   title: "اتيليه فساتين زفاف وافراح",
@@ -39,7 +39,7 @@ export const metadata = {
 export default function Home () {
   return (
     <>
-             <MainSlider/>
+          <MainSlider/>
        {/* <main>
        <MainSlider/>
       <section>
@@ -66,10 +66,10 @@ export default function Home () {
       <section>
         <InstagramBanner/>
       </section>
-       </main>
+       </main> */}
       <footer>
          <Footer/>
-      </footer> */}
+      </footer>
     </>
   )
 }
