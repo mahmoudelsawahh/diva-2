@@ -10,6 +10,10 @@ const MainPage = dynamic(() => import('./MainPage'),{
     ssr : false,
     // loading : ()=> <h1>loading</h1>
   });
+  const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
+  ssr : false
+});
+
 const MainSlider = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   // const [emblaRef] = useEmblaCarousel({direction : 'rtl', loop : true }, [Autoplay({
@@ -50,8 +54,10 @@ const MainSlider = () => {
       </div>
     </div>
   </div> */}
+  <nav>
+             <DrawerAppBar/>
+    </nav>
    <div style={{height : '100vh'}}>
-     <h1>hello</h1>
    </div>
   <MainPage/>
 
