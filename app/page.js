@@ -10,6 +10,9 @@ const Footer = dynamic(() => import('./components/footer/Footer'),{
 export const metadata = {
   title: "اتيليه فساتين زفاف وافراح",
 }  
+// const MainPage = dynamic(() => import('./components/MainPage'),{
+//   ssr : false,
+// });
 
 export default function Home () {
   return (

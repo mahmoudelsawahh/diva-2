@@ -6,9 +6,6 @@ import firstBg from '/public/divanice.com_imgs_diva2.webp'
 import secondBg from '/public/divanice.com_imgs_diva3.webp'
 import { Typography } from '@/app/lib/MuiSsr'
 import dynamic from 'next/dynamic'
-const MainPage = dynamic(() => import('./MainPage'),{
-    ssr : false,
-  });
 const MainSlider = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [emblaRef] = useEmblaCarousel({direction : 'rtl', loop : true }, [Autoplay({
@@ -49,7 +46,6 @@ const MainSlider = () => {
       </div>
     </div>
   </div>
-  <MainPage/>
 
      </>
     )
