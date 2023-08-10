@@ -1,3 +1,4 @@
+"use client"
 import './globals.css'
 import dynamic from "next/dynamic";
 const Loading = dynamic(() => import('@/app/loading'),{
