@@ -2,14 +2,13 @@
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
-import firstBg from '/public/Artboard – 3'
-import secondBg from '/public/Artboard – 3'
+import firstBg from '/public/Artboard – 3.png'
+import secondBg from '/public/Artboard – 3.png'
 import { Typography } from '@/app/lib/MuiSsr'
 import dynamic from 'next/dynamic'
 const MainPage = dynamic(() => import('./MainPage'),{
     ssr : false,
   });
-
 
 const MainSlider = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
