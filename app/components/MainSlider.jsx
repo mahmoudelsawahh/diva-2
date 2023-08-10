@@ -6,10 +6,10 @@ import firstBg from '/public/divanice.com_imgs_diva2.webp'
 import secondBg from '/public/divanice.com_imgs_diva3.webp'
 import { Typography } from '@/app/lib/MuiSsr'
 import dynamic from 'next/dynamic'
-import LazyLoad from 'react-lazyload'
 const MainPage = dynamic(() => import('./MainPage'),{
     ssr : false,
   });
+
 
 const MainSlider = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -51,9 +51,7 @@ const MainSlider = () => {
       </div>
     </div>
   </div>
-      <LazyLoad height={'100%'} once>
-         <MainPage/>
-      </LazyLoad>
+         {/* <MainPage/> */}
      </>
     )
 }
