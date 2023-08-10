@@ -1,24 +1,24 @@
 "use client"
-import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
-import Image from 'next/image'
-import firstBg from '/public/divanice.com_imgs_diva2.webp'
-import secondBg from '/public/divanice.com_imgs_diva3.webp'
-import { Typography } from '@/app/lib/MuiSsr'
+// import useEmblaCarousel from 'embla-carousel-react'
+// import Autoplay from 'embla-carousel-autoplay'
+// import Image from 'next/image'
+// import firstBg from '/public/divanice.com_imgs_diva2.webp'
+// import secondBg from '/public/divanice.com_imgs_diva3.webp'
+// import { Typography } from '@/app/lib/MuiSsr'
 import dynamic from 'next/dynamic'
 const MainPage = dynamic(() => import('./MainPage'),{
     ssr : false,
-    loading : ()=> <h1>loading</h1>
+    // loading : ()=> <h1>loading</h1>
   });
 const MainSlider = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [emblaRef] = useEmblaCarousel({direction : 'rtl', loop : true }, [Autoplay({
-    delay : 5000
-  })])
+  // const [emblaRef] = useEmblaCarousel({direction : 'rtl', loop : true }, [Autoplay({
+  //   delay : 5000
+  // })])
 
   return (
      <>
-       <div className="embla">
+       {/* <div className="embla">
     <div className="embla__viewport" ref={emblaRef}>
       <div className="embla__container">
           <div className="embla__slide">
@@ -49,7 +49,10 @@ const MainSlider = () => {
           </div>
       </div>
     </div>
-  </div>
+  </div> */}
+   <div style={{height : '100vh'}}>
+     <h1>hello</h1>
+   </div>
   <MainPage/>
 
      </>
