@@ -107,6 +107,7 @@
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+
 }
 .MuiFormControl-root{
   width: 100% !important;
@@ -176,6 +177,9 @@
   width: 100%;
   height: 500px;
 }
+
+
+
 .category-content .active{
   background-color: var(--secondary-color);
   color : #fff
@@ -231,6 +235,8 @@ text-align: end !important;
   height: 4px;
   background-color: var(--secondary-color);
 }
+
+
 /* -------------------------------------------------- */
 
 
