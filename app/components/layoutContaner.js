@@ -49,9 +49,9 @@ export default function LayoutContainer({ children }) {
       <ThemeProvider theme={theme}>
       <CssBaseline/>
          <>
-           {/* <nav>
+           <nav>
              <DrawerAppBar/>
-          </nav> */}
+          </nav>
             {children}
            <LazyLoad height={"100%"} once offset={1000}>
                 <SocialFooter/>
