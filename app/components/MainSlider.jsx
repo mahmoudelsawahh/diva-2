@@ -6,17 +6,12 @@ import firstBg from '/public/divanice.com_imgs_diva2.webp'
 import secondBg from '/public/divanice.com_imgs_diva3.webp'
 import { Typography } from '@/app/lib/MuiSsr'
 import dynamic from 'next/dynamic'
-import { useEffect, useState } from 'react'
 const MainPage = dynamic(() => import('./MainPage'),{
     ssr : false,
   });
 
 
 const MainSlider = () => {
-  const [show , setShow] = useState(false)
-  useEffect(()=>{
-    setShow(true)
-  },[])
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [emblaRef] = useEmblaCarousel({direction : 'rtl', loop : true }, [Autoplay({
     delay : 5000
@@ -56,7 +51,7 @@ const MainSlider = () => {
       </div>
     </div>
   </div>
-   {show ? <MainPage/> : null}
+  <MainPage/>
 
      </>
     )
