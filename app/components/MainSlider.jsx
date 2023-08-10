@@ -8,9 +8,8 @@ import { Typography } from '@/app/lib/MuiSsr'
 import dynamic from 'next/dynamic'
 const MainPage = dynamic(() => import('./MainPage'),{
     ssr : false,
+    loading : ()=> <h1>loading</h1>
   });
-
-
 const MainSlider = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [emblaRef] = useEmblaCarousel({direction : 'rtl', loop : true }, [Autoplay({
@@ -24,7 +23,7 @@ const MainSlider = () => {
       <div className="embla__container">
           <div className="embla__slide">
           <div className="slide-content">
-                    <Typography variant='h1' sx={{fontSize : '15px', fontWeight : 'bold', textAlign : 'center'}}>أتيليه وميك أب أستوديو ديفا</Typography>
+                <Typography variant='h1' sx={{fontSize : '15px', fontWeight : 'bold', textAlign : 'center'}}>أتيليه وميك أب أستوديو ديفا</Typography>
 			        <Typography sx={{fontSize : "2.3rem" , fontWeight : 'bold', marginBottom : '12px', textAlign : 'center'}}>أكبر أتيليه وميك أب ستوديو في المحلة الكبرى</Typography>
 			        <Typography variant='body1' sx={{fontSize : {xs : '20ox', md : '25px'}, textAlign : 'center'}}>مرحباً بكم في &quot; ديفا &quot; أتيليه وميك أب أستوديو</Typography>
 		      	</div>
