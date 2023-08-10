@@ -51,7 +51,6 @@ const MainSlider = () => {
       </div>
     </div>
   </div>
-         <MainPage/>
      </>
     )
 }

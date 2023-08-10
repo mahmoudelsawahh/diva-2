@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import MainPage from './components/MainPage';
 const MainSlider = dynamic(() => import('./components/MainSlider'),{
   ssr : false,
 });
@@ -15,6 +16,8 @@ export default function Home () {
   return (
     <>
           <MainSlider/>
+          <MainPage/>
+
       <footer>
          <Footer/>
       </footer>
