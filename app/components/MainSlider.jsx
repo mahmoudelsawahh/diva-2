@@ -5,6 +5,9 @@ import Image from 'next/image'
 import firstBg from '/public/divanice.com_imgs_diva2.webp'
 import secondBg from '/public/divanice.com_imgs_diva3.webp'
 import { Typography } from '@/app/lib/MuiSsr'
+const MainPage = dynamic(() => import('./MainPage'),{
+    ssr : false,
+  });
 
 const MainSlider = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -13,7 +16,8 @@ const MainSlider = () => {
   })])
 
   return (
-      <div className="embla">
+     <>
+       <div className="embla">
     <div className="embla__viewport" ref={emblaRef}>
       <div className="embla__container">
           <div className="embla__slide">
@@ -45,6 +49,9 @@ const MainSlider = () => {
       </div>
     </div>
   </div>
+  <MainPage/>
+
+     </>
     )
 }
 
