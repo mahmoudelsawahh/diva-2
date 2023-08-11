@@ -37,19 +37,19 @@ const Category = () => {
   const slug = usePathname();
 
 
-  useEffect(() => {
-    fetch(`${baseUrl}/rest/tables.article/getPosts`,{
-      method : 'POST',
-      headers : {
-        'Content-Type': 'application/json',
-      },
-      body : JSON.stringify({"id" : getId}),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setCategoryData(data.data)
-      })
-  }, [getId])
+  // useEffect(() => {
+  //   fetch(`${baseUrl}/rest/tables.article/getPosts`,{
+  //     method : 'POST',
+  //     headers : {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body : JSON.stringify({"id" : getId}),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setCategoryData(data.data)
+  //     })
+  // }, [getId])
 
   return (
     <Box sx={{position : 'relative', height : '100%'}}>

@@ -21,9 +21,9 @@ const LatestNews = dynamic(() => import('./latestNews/LatestNews'),{
 const InstagramBanner = dynamic(() => import('./InstagramBanner/InstagramBanner'),{
   ssr : false,
 });
-// const Category = dynamic(() => import('./Category/Category'),{
-//   ssr : false,
-// });
+const Category = dynamic(() => import('./Category/Category'),{
+  ssr : false,
+});
 const MainPage = () => {
   return (
     <>
@@ -39,9 +39,9 @@ const MainPage = () => {
       <section>
         <DevaStudioVideo/>
       </section>
-      {/* <section>
+      <section>
        <Category/>
-      </section> */}
+      </section>
       <section>
         <Distinguishes/>
       </section>
