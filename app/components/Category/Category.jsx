@@ -78,7 +78,7 @@ const Category = () => {
      })}
   </Box>
   <Grid container spacing={3}>
-        <Suspense fallback={<Loading/>}>
+        {/* <Suspense fallback={<Loading/>}>
         {
           categoryData.map((item)=>{
             return (
@@ -93,7 +93,7 @@ const Category = () => {
             )
           })
          }
-        </Suspense>
+        </Suspense> */}
       </Grid>
                <Box sx={{display : slug === "/" ? "flex": "none", flexDirection : 'column', alignItems : 'center', margin : '50px 0px'}}>
                  <Button 
