@@ -51,7 +51,7 @@ const AllCategory = ({CategoryData}) => {
   },[getId , CategoryData])
   return (
     <Box sx={{position : 'relative', height : '100%'}}>
-    <LazyLoad height={"100%"} once>
+    <LazyLoad height={"700px"} once>
     <Image loading='lazy' src={waveBg} alt='ما الذي نقدمه من خدمات ؟' layout='full' height={75} style={{position : 'absolute' , top : 0, left : 0, transform: "rotate(180deg)", zIndex : 255, width : '100%'}}/> 
     </LazyLoad>
            <LazyLoad height={'100%'} once>

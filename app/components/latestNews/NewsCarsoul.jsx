@@ -26,7 +26,7 @@ const NewsCarsoul = ({data}) => {
             return (
                 <Box className="embla-iframe-video__slide" key={id} sx={{flex : {xs :  '0 0 100%' , md :  '0 0 50%' , lg :  '0 0 33.3%'} }}>
                     <div className='embla-iframe-video__slide__img'>
-                       <LazyLoad height={'100%'} once>
+                       <LazyLoad height={'700px'} once>
                             <Card onClick={()=> router.push(`/blog/${item.id}/${item.name.split(' ').join('-')}`)}>
                               <CardActionArea>
                               <CardMedia >
