@@ -8,9 +8,9 @@ const Distinguishes = dynamic(() => import('./Distinguishes/Distinguishes'),{
 const AboutUs = dynamic(() => import('./about-homePage/AboutUs'),{
   ssr : false,
 });
-// const Service = dynamic(() => import('./Service/Service'),{
-//   ssr : false,
-// });
+const Service = dynamic(() => import('./Service/Service'),{
+  ssr : false,
+});
 const Goals = dynamic(() => import('./Goals/Goals'),{
   ssr : false,
 });
