@@ -5,13 +5,13 @@ import rtlPlugin from 'stylis-plugin-rtl';
 import dynamic from 'next/dynamic';
 import LazyLoad from 'react-lazyload';
 
-const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
-  ssr : false
-});
+// const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
+//   ssr : false
+// });
 
-const SocialFooter = dynamic(() => import('./footer/SocialFooter'),{
-  ssr : false
-});
+// const SocialFooter = dynamic(() => import('./footer/SocialFooter'),{
+//   ssr : false
+// });
 const cache = createCache({
   key: 'css',
   prepend: true,
