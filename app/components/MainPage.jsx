@@ -28,9 +28,9 @@ const Category = dynamic(() => import('./Category/Category'),{
 const MainPage = () => {
   return (
     <>
-      {/* <section>
+      <section>
         <AboutUs/>
-      </section> */}
+      </section>
      <section>
         <Service/>
       </section>
