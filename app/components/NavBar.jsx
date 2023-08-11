@@ -34,10 +34,10 @@ export default function DrawerAppBar(props) {
     //     title : 'المقالات',
     //     slug : '/blog'
     // },
-    {
-        title : 'اتصل بنا',
-        slug : '/contact'
-    },
+    // {
+    //     title : 'اتصل بنا',
+    //     slug : '/contact'
+    // },
   ]
 
 
