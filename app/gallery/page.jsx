@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic';
 const AllCategory = dynamic(() => import('../components/Category/AllCategory'),{
   ssr : false,
-  loading: () => <div>Loading...</div>
 });
 import { getCategoryData } from '../lib/DataFetching';
 import { Suspense } from 'react';
@@ -10,7 +9,6 @@ const Loading = dynamic(() => import('@/app/loading'),{
 });
 const Footer = dynamic(() => import('@/app/components/footer/Footer'),{
   ssr : false,
-  loading: () => <div>Loading...</div>
 });
 
 export const metadata = {
