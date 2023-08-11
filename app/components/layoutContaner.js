@@ -2,8 +2,8 @@
 import { createCache , CacheProvider, ThemeProvider , CssBaseline, createTheme  } from '@/app/lib/MuiSsr';
 import { Cairo } from 'next/font/google';
 import rtlPlugin from 'stylis-plugin-rtl';
-import dynamic from 'next/dynamic';
-import LazyLoad from 'react-lazyload';
+// import dynamic from 'next/dynamic';
+// import LazyLoad from 'react-lazyload';
 
 // const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
 //   ssr : false
@@ -50,12 +50,12 @@ export default function LayoutContainer({ children }) {
       <CssBaseline/>
          <>
            <nav>
-             <DrawerAppBar/>
+             {/* <DrawerAppBar/> */}
           </nav>
             {children}
-           <LazyLoad height={"100%"} once offset={1000}>
+           {/* <LazyLoad height={"100%"} once offset={1000}>
                 <SocialFooter/>
-           </LazyLoad>
+           </LazyLoad> */}
          </>
       </ThemeProvider>
     </CacheProvider>
