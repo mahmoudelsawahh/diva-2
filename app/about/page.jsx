@@ -1,8 +1,15 @@
 import dynamic from 'next/dynamic'
  
-const Fake = dynamic(() => import('../components/FakeComponent/Fake'),{
+const Service = dynamic(() => import('../components/Service/Service'),{
   ssr : false
 })
+const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'),{
+  ssr : false
+})
+
+const Footer = dynamic(() => import('@/app/components/footer/Footer'),{
+  ssr : false
+});
 
 export const metadata = {
   title: "اتيليه فساتين زفاف وافراح",
@@ -10,7 +17,17 @@ export const metadata = {
 const About = () => {
   return (
     <>
-      <Fake/>
+       <main>
+       <section>
+            <Service/>
+        </section>
+        <section>
+          <InstagramBanner/>
+        </section>
+       </main>
+       <footer>
+          <Footer/>
+       </footer>
     </>
   )
 }

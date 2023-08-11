@@ -26,26 +26,25 @@ export default function DrawerAppBar(props) {
         title : 'من نحن',
         slug : '/about'
     },
-    // {
-    //     title : 'خدماتنا',
-    //     slug : '/gallery'
-    // },
-    // {
-    //     title : 'المقالات',
-    //     slug : '/blog'
-    // },
-    // {
-    //     title : 'اتصل بنا',
-    //     slug : '/contact'
-    // },
+    {
+        title : 'خدماتنا',
+        slug : '/gallery'
+    },
+    {
+        title : 'المقالات',
+        slug : '/blog'
+    },
+    {
+        title : 'اتصل بنا',
+        slug : '/contact'
+    },
   ]
 
 
   const navLink = ()=>{
     return (
-      <>
-         
-         {navbarData.map((item , id)=>{
+      <> 
+         {/* {navbarData.map((item , id)=>{
             return (
                 <Link key={id} aria-label='مركز تجميل عرائس وميك اب Diva' href={item.slug} 
              className={currentRoute === "/" ? "active" : "no-active"  }
@@ -55,8 +54,7 @@ export default function DrawerAppBar(props) {
                     {item.title} 
                    </Link>   
             )
-         })}
-         
+         })} */}
       </>
     )
   }
