@@ -1,3 +1,4 @@
+
 import dynamic from 'next/dynamic';
 const ContactTitle = dynamic(() => import('../components/ContactPage/ContactTitle'),{
   ssr : false

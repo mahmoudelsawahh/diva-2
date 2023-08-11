@@ -1,7 +1,6 @@
 "use client"
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import rtlPlugin from 'stylis-plugin-rtl';
-import { prefixer } from 'stylis';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import {  Button, Grid , TextField} from '@/app/lib/MuiSsr';
@@ -12,7 +11,7 @@ const theme = createTheme({
 // Create rtl cache
 const cacheRtl = createCache({
   key: 'muirtl',
-  stylisPlugins: [prefixer, rtlPlugin],
+  stylisPlugins: [rtlPlugin],
 });
 
 export default function ContactForm() {

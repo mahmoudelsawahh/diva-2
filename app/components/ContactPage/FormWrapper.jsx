@@ -1,7 +1,9 @@
 "use client"
-import ContactForm from './ContactForm'
 import { Box, Container, Grid, Typography} from '@/app/lib/MuiSsr';
-
+import dynamic from 'next/dynamic';
+const ContactForm = dynamic(() => import('./ContactForm'),{
+  ssr : false
+});
 const FormWrapper = () => {
   return (
     <>
@@ -25,7 +27,6 @@ const FormWrapper = () => {
                 <Typography variant='h3' sx={{ color: '#E60263', fontSize: '25px', fontWeight: 'bold' }}>ساعات العمل</Typography>
                 <Typography variant='body1' sx={{ fontSize: '25px', color: '#808080', margin: '15px 0px' }}> يوميا من 12:00 م الي 01:00 ص </Typography>
                 <Typography variant='body1' sx={{ fontSize: '25px', color: '#808080', margin: '15px 0px' }}>  يوم الجمعة من 03:00 م الي 01:00 ص </Typography>
-
               </Box>
           </Grid>
 

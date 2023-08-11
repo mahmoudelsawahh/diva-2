@@ -1,7 +1,6 @@
 "use client"
 import Logo from '/public/diva-logo.png'
 import Image from 'next/image';
-import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import {AppBar , Box  , CssBaseline , Divider , Drawer, IconButton , 
   List , ListItem, Toolbar  , Container , SearchIcon , MenuIcon, Button 
@@ -34,10 +33,10 @@ export default function DrawerAppBar(props) {
     //     title : 'المقالات',
     //     slug : '/blog'
     // },
-    // {
-    //     title : 'اتصل بنا',
-    //     slug : '/contact'
-    // },
+    {
+        title : 'اتصل بنا',
+        slug : '/contact'
+    },
   ]
 
 
