@@ -7,6 +7,10 @@ const Footer = dynamic(() => import('./components/footer/Footer'),{
   ssr : false,
 });
 
+const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
+  ssr : false
+});
+
 export const metadata = {
   title: "اتيليه فساتين زفاف وافراح",
 }  
@@ -17,6 +21,9 @@ const MainPage = dynamic(() => import('./components/MainPage'),{
 export default function Home () {
   return (
     <>
+            <nav>
+             <DrawerAppBar/>
+          </nav>
           <MainSlider/>
           <MainPage/>
       <footer>

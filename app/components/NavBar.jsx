@@ -25,14 +25,14 @@ export default function DrawerAppBar(props) {
         title : 'من نحن',
         slug : '/about'
     },
-    // {
-    //     title : 'خدماتنا',
-    //     slug : '/gallery'
-    // },
-    // {
-    //     title : 'المقالات',
-    //     slug : '/blog'
-    // },
+    {
+        title : 'خدماتنا',
+        slug : '/gallery'
+    },
+    {
+        title : 'المقالات',
+        slug : '/blog'
+    },
     {
         title : 'اتصل بنا',
         slug : '/contact'

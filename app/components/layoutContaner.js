@@ -5,9 +5,6 @@ import rtlPlugin from 'stylis-plugin-rtl';
 import dynamic from 'next/dynamic';
 import LazyLoad from 'react-lazyload';
 
-const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
-  ssr : false
-});
 
 const SocialFooter = dynamic(() => import('./footer/SocialFooter'),{
   ssr : false
@@ -49,9 +46,6 @@ export default function LayoutContainer({ children }) {
       <ThemeProvider theme={theme}>
       <CssBaseline/>
          <>
-           <nav>
-             <DrawerAppBar/>
-          </nav>
             {children}
            <LazyLoad height={"100%"} once offset={1000}>
                 <SocialFooter/>
