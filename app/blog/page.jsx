@@ -1,24 +1,21 @@
 "use client"
-// import dynamic from 'next/dynamic'
-// import LazyLoad from 'react-lazyload'
-// const BlogTitle = dynamic(() => import('../components/blog-Page/BlogTitle'), {
-//   ssr : false
-// })
-// const BlogContainer = dynamic(() => import('../components/blog-Page/BlogContainer'), {
-//   ssr : false
-// })
-// const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'), {
-//   ssr : false
-// })
+import dynamic from 'next/dynamic'
+import LazyLoad from 'react-lazyload'
+const BlogTitle = dynamic(() => import('../components/blog-Page/BlogTitle'), {
+})
+const BlogContainer = dynamic(() => import('../components/blog-Page/BlogContainer'), {
+})
+const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'), {
+})
 
-// const Footer = dynamic(() => import('@/app/components/footer/Footer'),{
-//   ssr : false
-// });
+const Footer = dynamic(() => import('@/app/components/footer/Footer'),{
+  ssr : false
+});
 
 export default  function Blog (){
   return (
    <>
-    {/* <main>
+    <main>
     <section>
       <BlogTitle/>
     </section>
@@ -33,8 +30,7 @@ export default  function Blog (){
     </main>
     <footer>
          <Footer/>
-      </footer> */}
-      <h1>sssssssssssssssss</h1>
+      </footer>
    </>
   )
 }
