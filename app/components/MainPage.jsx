@@ -19,9 +19,9 @@ const AboutUs = dynamic(() => import('./about-homePage/AboutUs'),{
 // const LatestNews = dynamic(() => import('./latestNews/LatestNews'),{
 //   ssr : false,
 // });
-// const InstagramBanner = dynamic(() => import('./InstagramBanner/InstagramBanner'),{
-//   ssr : false,
-// });
+const InstagramBanner = dynamic(() => import('./InstagramBanner/InstagramBanner'),{
+  ssr : false,
+});
 // const Category = dynamic(() => import('./Category/Category'),{
 //   ssr : false,
 // });
@@ -48,10 +48,10 @@ const MainPage = () => {
       </section>
       <section>
        <LatestNews/>
-      </section>
+      </section> */}
       <section>
         <InstagramBanner/>
-      </section> */}
+      </section>
     </>
   )
 }
