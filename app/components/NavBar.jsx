@@ -45,7 +45,7 @@ export default function DrawerAppBar(props) {
     return (
       <>
          
-         {navbarData.map((item , id)=>{
+         {/* {navbarData.map((item , id)=>{
             return (
                 <Link key={id} aria-label='مركز تجميل عرائس وميك اب Diva' href={item.slug} 
              className={currentRoute === "/" ? "active" : "no-active"  }
@@ -56,7 +56,7 @@ export default function DrawerAppBar(props) {
                    </Link>   
             )
          })}
-         
+          */}
       </>
     )
   }

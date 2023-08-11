@@ -25,8 +25,6 @@ const Distinguishes = () => {
         <Container maxWidth="xl" fixed>
              <Typography variant='body1' sx={{textAlign : 'center', color : '#E60263', fontSize : '14px', fontWeight : 'bold'}}>ارقامنا اهم مايميزنا</Typography>
              <Typography variant='h1' sx={{textAlign : 'center', fontSize : '2rem', fontWeight : 'bold', position : 'relative'}} className='underline-service-title'> نحرص دائما علي ارضاء عملائنا </Typography>
-          
-         
          <Box sx={{margin : "100px 0px"}}>
          <Grid container>
             {data.map((item, id)=>{

@@ -1,5 +1,5 @@
 "use client"
-import { Box, IconButton , PhoneIcon , WhatsAppIcon , Reveal } from '@/app/lib/MuiSsr'
+import { Box, IconButton , PhoneIcon , WhatsAppIcon } from '@/app/lib/MuiSsr'
 import Image from 'next/image';
 import massengerLogo from '/public/messenger.png.png'
 import { useRouter } from 'next/navigation';
@@ -10,9 +10,7 @@ const SocialFooter = () => {
     <>
       <Box sx={{display : {xs : 'none', md : 'block'}}}>
          <ul style={{position : 'fixed', right : '20px', bottom : 0, paddingBottom : '20px', zIndex : 454545454545, marginBottom : '1rem'}}>
-            <Reveal effect="fadeInUp">
-            <li style={{listStyle : 'none', marginBottom : '10px'}}>
-                
+            <li style={{listStyle : 'none', marginBottom : '10px'}}>                
                 <IconButton size='large' type='button' title='btn-phoneNumber' onClick={()=> router.push('tel:01200001315')}>
                   <LazyLoad height={"100%"} once>
                     <PhoneIcon 
@@ -48,7 +46,6 @@ const SocialFooter = () => {
                     </LazyLoad>
                 </IconButton>
             </li>
-            </Reveal>
           </ul>
         </Box>
         <Box sx={{display : {xs : 'block', md : 'none'}}}>
