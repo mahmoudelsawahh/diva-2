@@ -21,9 +21,6 @@ const MainPage = dynamic(() => import('./components/MainPage'),{
 export default function Home () {
   return (
     <>
-            <nav>
-             <DrawerAppBar/>
-          </nav>
           <MainSlider/>
           <MainPage/>
       <footer>
