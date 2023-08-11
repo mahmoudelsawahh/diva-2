@@ -11,14 +11,11 @@ import LazyLoad from 'react-lazyload';
 const Loading = dynamic(() => import('@/app/loading'),{
   ssr : false
 });
-
-
 const NewsCarsoul = ({data}) => {
   const router = useRouter()
   const [emblaRef] = useEmblaCarousel({direction : 'rtl', loop : true },
    [Autoplay({delay : 5000 })]
    )
-
   return (
     <Container maxWidth="lg">
         <div className="embla-iframe-video">
