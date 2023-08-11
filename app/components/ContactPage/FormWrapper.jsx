@@ -1,16 +1,16 @@
 "use client"
 import { Box, Container, Grid, Typography} from '@/app/lib/MuiSsr';
-// import dynamic from 'next/dynamic';
-// const ContactForm = dynamic(() => import('./ContactForm'),{
-//   ssr : false
-// });
+import dynamic from 'next/dynamic';
+const ContactForm = dynamic(() => import('./ContactForm'),{
+  ssr : false
+});
 const FormWrapper = () => {
   return (
     <>
       <Container maxWidth="lg" fixed>
         <Grid container rowSpacing={3}>
           <Grid item xs={12} lg={6}>
-              {/* <ContactForm /> */}
+              <ContactForm />
           </Grid>
           <Grid item xs={12} lg={6} >
               <Box sx={{ borderBottom: '1px solid #ddd', paddingBottom: '25px' }}>
