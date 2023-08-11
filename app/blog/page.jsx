@@ -24,7 +24,7 @@ export default async function Blog (){
       <BlogTitle/>
     </section>
     <section>
-             <SubBlog data={data.data}/>
+             {/* <SubBlog data={data.data}/> */}
     </section>
     <section>
       <InstagramBanner/>
