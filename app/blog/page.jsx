@@ -8,9 +8,6 @@ const BlogContainer = dynamic(() => import('../components/blog-Page/BlogContaine
 const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'), {
 })
 
-export const metadata = {
-  title: "اتيليه فساتين زفاف وافراح",
-}
 const Footer = dynamic(() => import('@/app/components/footer/Footer'),{
   ssr : false
 });
