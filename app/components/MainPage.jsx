@@ -1,7 +1,9 @@
 "use client"
 // import dynamic from 'next/dynamic';
 import AboutUs from './about-homePage/AboutUs';
+import Goals from './Goals/Goals';
 import InstagramBanner from './InstagramBanner/InstagramBanner';
+import Service from './Service/Service';
 
 // const Distinguishes = dynamic(() => import('./Distinguishes/Distinguishes'),{
 //   ssr : false,
@@ -33,13 +35,13 @@ const MainPage = () => {
       <section>
         <AboutUs/>
       </section>
-     {/* <section>
+     <section>
         <Service/>
       </section>
       <section>
         <Goals/>
       </section>
-      <section>
+      {/* <section>
         <DevaStudioVideo/>
       </section>
       <section>

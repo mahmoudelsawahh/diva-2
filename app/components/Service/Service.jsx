@@ -1,5 +1,5 @@
 "use client"
-import {Fade , Slide , Box, Container, Grid, Typography} from '@/app/lib/MuiSsr';
+import {Box, Container, Grid, Typography} from '@/app/lib/MuiSsr';
 import Image from 'next/image';
 import divaBg from '/public/divanice.com_imgs_section-bg.webp'
 import waveBg from '/public/divanice.com_imgs_waves.png'
@@ -42,21 +42,15 @@ const Service = () => {
             <Box sx={{position : 'absolute', width : '100%', height : '100%', backgroundColor : 'rgba(254, 245, 246, .85)',  top : 0 , left : 0  }}>
             </Box>
             <Container maxWidth="xl"  sx={{textAlign : 'center', padding : '40px 0px'}}>
-        <Slide bottom>
               <Typography variant='body1' sx={{fontSize : '14px', fontWeight : 'bold' , color : '#E60263', marginTop : '50px'}}>الخدمات المميزة</Typography>
               <Typography variant='h1' sx={{fontWeight : 'bold', position : 'relative', fontSize : '2rem', marginBottom : '60px'}} className='underline-service-title' >ما الذي نقدمه من خدمات ؟</Typography>
-        </Slide>
         <Grid container spacing={3} sx={{marginBottom : '50px'}}>
             {serviceData.map((item , id)=>{
                 return (
                    // eslint-disable-next-line react/jsx-key
                    <Grid item xs={12} lg={4} key={id}>
-                    <Fade left>
-                       <Slide bottom>
                              <Typography variant='h1' sx={{fontWeight : 'bold' , margin : '20px 0px' ,textAlign : 'center', fontSize : '1.5rem'}}>{item.title}</Typography>
-                       </Slide>
                         <Typography  sx={{fontSize : '18px', margin : 'auto', lineHeight : '40px', width : '90%', fontWeight : 500}}>{item.description}</Typography>
-                       </Fade>
                     </Grid>
                 )
             })}
@@ -64,7 +58,6 @@ const Service = () => {
     </Container>
         <LazyLoad height={'100%'} once>
         <Image loading='lazy' src={waveBg} layout='full' alt='ما الذي نقدمه من خدمات ؟' height={75} style={{position : 'absolute' , bottom : 0, left : 0, zIndex : 255, width : '100%'}}/> 
-
         </LazyLoad>
         </Box>
   )

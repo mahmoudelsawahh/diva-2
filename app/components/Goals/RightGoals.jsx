@@ -1,5 +1,5 @@
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
-import { Box, IconButton, Typography , Fade} from '@/app/lib/MuiSsr';
+import { Box, IconButton, Typography} from '@/app/lib/MuiSsr';
 
 const GoalsData = [
     {
@@ -27,7 +27,6 @@ const RightGoals = () => {
                 return (
                         // eslint-disable-next-line react/jsx-key
                         <Box sx={{margin : '50px 0px'}} key={id}>
-                        <Fade right>
                         <Box sx={{display : 'flex', justifyContent : 'flex-start', alignItems : 'center'}}>
                                    <IconButton aria-label={item.title} title={item.title} component="span" sx={{margin : 0 , padding : 0, color : '#000'}} size='large'>
                                         <KeyboardDoubleArrowDownIcon title={item.title} aria-label={item.title} sx={{marginRight : "10px"}}/>
@@ -37,7 +36,6 @@ const RightGoals = () => {
                          <Typography variant='body1' sx={{paddingRight : '25px',marginRight : '25px',  color : '#808080', fontWeight : 400 , lineHeight : '30px', fontSize : '25px'}}>
                             {item.description}
                          </Typography>
-                        </Fade>
                         </Box>
                 )
             })
