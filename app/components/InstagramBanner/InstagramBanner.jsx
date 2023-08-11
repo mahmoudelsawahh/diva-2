@@ -1,7 +1,5 @@
-"use client"
 import { Button, Container, Typography } from '@/app/lib/MuiSsr'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 const InstagramBanner = () => {
   return (
      <Container maxWidth="xl" fixed>

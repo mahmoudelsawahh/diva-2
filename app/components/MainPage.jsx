@@ -1,12 +1,14 @@
 "use client"
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
+import AboutUs from './about-homePage/AboutUs';
+import InstagramBanner from './InstagramBanner/InstagramBanner';
 
 // const Distinguishes = dynamic(() => import('./Distinguishes/Distinguishes'),{
 //   ssr : false,
 // });
-const AboutUs = dynamic(() => import('./about-homePage/AboutUs'),{
-  ssr : false,
-});
+// const AboutUs = dynamic(() => import('./about-homePage/AboutUs'),{
+//   ssr : false,
+// });
 // const Service = dynamic(() => import('./Service/Service'),{
 //   ssr : false,
 // });
@@ -19,9 +21,9 @@ const AboutUs = dynamic(() => import('./about-homePage/AboutUs'),{
 // const LatestNews = dynamic(() => import('./latestNews/LatestNews'),{
 //   ssr : false,
 // });
-const InstagramBanner = dynamic(() => import('./InstagramBanner/InstagramBanner'),{
-  ssr : false,
-});
+// const InstagramBanner = dynamic(() => import('./InstagramBanner/InstagramBanner'),{
+//   ssr : false,
+// });
 // const Category = dynamic(() => import('./Category/Category'),{
 //   ssr : false,
 // });
