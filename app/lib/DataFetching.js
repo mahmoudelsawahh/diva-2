@@ -15,7 +15,6 @@ export async function getCategoryData() {
       // This will activate the closest `error.js` Error Boundary
       return <Loading/>
     }
-   
     return res.json()
   }
 
