@@ -1,9 +1,6 @@
 "use client"
 import dynamic from 'next/dynamic';
 import LazyLoad from 'react-lazyload';
-const Footer = dynamic(() => import('./footer/Footer'),{
-  ssr : false,
-});
 const Distinguishes = dynamic(() => import('./Distinguishes/Distinguishes'),{
   ssr : false,
 });
@@ -59,7 +56,7 @@ const MainPage = () => {
       <section>
         <InstagramBanner/>
       </section>
-      <Footer/>
+      
     </>
   )
 }
