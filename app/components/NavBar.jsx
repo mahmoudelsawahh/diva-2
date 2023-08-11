@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import {AppBar , Box  , CssBaseline , Divider , Drawer, IconButton , 
-  List , ListItem, Toolbar  , Container , SearchIcon , MenuIcon 
+  List , ListItem, Toolbar  , Container , SearchIcon , MenuIcon, Button 
 } from '@/app/lib/MuiSsr';
 import { useState } from 'react';
 const drawerWidth = 240;
@@ -44,17 +44,19 @@ export default function DrawerAppBar(props) {
   const navLink = ()=>{
     return (
       <> 
-         {/* {navbarData.map((item , id)=>{
+         {navbarData.map((item , id)=>{
             return (
-                <Link key={id} aria-label='مركز تجميل عرائس وميك اب Diva' href={item.slug} 
+                <Link key={id} href={item.slug}>
+                <Button key={id} aria-label='مركز تجميل عرائس وميك اب Diva' 
              className={currentRoute === "/" ? "active" : "no-active"  }
              title={item.title}
-            style={{fontWeight : 'bold' , margin : '10px 20px', fontSize : '18px'}}
+            sx={{fontWeight : 'bold' , margin : '10px 20px', fontSize : '18px', color : '#000'}}
              >
                     {item.title} 
-                   </Link>   
+                   </Button>   
+                </Link>
             )
-         })} */}
+         })}
       </>
     )
   }
