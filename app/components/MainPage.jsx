@@ -14,9 +14,9 @@ const Service = dynamic(() => import('./Service/Service'),{
 const Goals = dynamic(() => import('./Goals/Goals'),{
   ssr : false,
 });
-// const DevaStudioVideo = dynamic(() => import('./DevaStudioVideo/DevaStudioVideo'),{
-//   ssr : false,
-// });
+const DevaStudioVideo = dynamic(() => import('./DevaStudioVideo/DevaStudioVideo'),{
+  ssr : false,
+});
 // const LatestNews = dynamic(() => import('./latestNews/LatestNews'),{
 //   ssr : false,
 // });
@@ -32,16 +32,16 @@ const MainPage = () => {
       <section>
         <AboutUs/>
       </section>
-     {/* <section>
+     <section>
         <Service/>
-      </section> */}
+      </section>
       <section>
         <Goals/>
       </section>
-      {/* <section>
+      <section>
         <DevaStudioVideo/>
       </section>
-      <section>
+      {/* <section>
        <Category/>
       </section> */}
       <section>
