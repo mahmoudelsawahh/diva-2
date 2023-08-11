@@ -1,5 +1,5 @@
 "use client"
-import {Box, Container, Grid, Typography} from '@/app/lib/MuiSsr';
+import {Fade , Slide , Box, Container, Grid, Typography} from '@/app/lib/MuiSsr';
 import Image from 'next/image';
 import divaBg from '/public/divanice.com_imgs_section-bg.webp'
 import waveBg from '/public/divanice.com_imgs_waves.png'
@@ -49,8 +49,12 @@ const Service = () => {
                 return (
                    // eslint-disable-next-line react/jsx-key
                    <Grid item xs={12} lg={4} key={id}>
+                    <Fade left>
+                       <Slide bottom>
                              <Typography variant='h1' sx={{fontWeight : 'bold' , margin : '20px 0px' ,textAlign : 'center', fontSize : '1.5rem'}}>{item.title}</Typography>
+                       </Slide>
                         <Typography  sx={{fontSize : '18px', margin : 'auto', lineHeight : '40px', width : '90%', fontWeight : 500}}>{item.description}</Typography>
+                       </Fade>
                     </Grid>
                 )
             })}
@@ -58,6 +62,7 @@ const Service = () => {
     </Container>
         <LazyLoad height={'100%'} once>
         <Image loading='lazy' src={waveBg} layout='full' alt='ما الذي نقدمه من خدمات ؟' height={75} style={{position : 'absolute' , bottom : 0, left : 0, zIndex : 255, width : '100%'}}/> 
+
         </LazyLoad>
         </Box>
   )
