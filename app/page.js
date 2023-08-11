@@ -3,14 +3,6 @@ const MainSlider = dynamic(() => import('./components/MainSlider'),{
   ssr : false,
 });
 
-const Footer = dynamic(() => import('./components/footer/Footer'),{
-  ssr : false,
-});
-
-const DrawerAppBar = dynamic(() => import('@/app/components/NavBar'),{
-  ssr : false
-});
-
 export const metadata = {
   title: "اتيليه فساتين زفاف وافراح",
 }  
@@ -23,7 +15,6 @@ export default function Home () {
     <>
           <MainSlider/>
           <MainPage/>
-         <Footer/>
     </>
   )
 }
