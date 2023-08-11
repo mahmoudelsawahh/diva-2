@@ -23,9 +23,7 @@ export default function Home () {
     <>
           <MainSlider/>
           <MainPage/>
-      <footer>
          <Footer/>
-      </footer>
     </>
   )
 }
