@@ -1,45 +1,35 @@
-// import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic'
  
-// const Service = dynamic(() => import('../components/Service/Service'),{
-//   ssr : false
-// })
-// const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'),{
-//   ssr : false
-// })
+const Service = dynamic(() => import('../components/Service/Service'),{
+  ssr : false
+})
+const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'),{
+  ssr : false
+})
 
-// const Footer = dynamic(() => import('@/app/components/footer/Footer'),{
-//   ssr : false
-// });
+const Footer = dynamic(() => import('@/app/components/footer/Footer'),{
+  ssr : false
+});
 
-// export const metadata = {
-//   title: "اتيليه فساتين زفاف وافراح",
-// }
-// const About = () => {
-//   return (
-//     <>
-//        <main>
-//        <section>
-//             <Service/>
-//         </section>
-//         <section>
-//           <InstagramBanner/>
-//         </section>
-//        </main>
-//        <footer>
-//           <Footer/>
-//        </footer>
-//     </>
-//   )
-// }
-
-// export default About
-
-import React from 'react'
-
-const page = () => {
+export const metadata = {
+  title: "اتيليه فساتين زفاف وافراح",
+}
+const About = () => {
   return (
-    <div>page</div>
+    <>
+       <main>
+       <section>
+            <Service/>
+        </section>
+        <section>
+          <InstagramBanner/>
+        </section>
+       </main>
+       <footer>
+          <Footer/>
+       </footer>
+    </>
   )
 }
 
-export default page
+export default About
