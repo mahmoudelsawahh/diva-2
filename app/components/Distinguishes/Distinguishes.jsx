@@ -1,5 +1,5 @@
 "use client"
-import { Box, Container, Grid, Typography , Slide} from '@/app/lib/MuiSsr'
+import { Box, Container, Grid, Typography } from '@/app/lib/MuiSsr'
 
 const data = [
     {
@@ -23,12 +23,8 @@ const data = [
 const Distinguishes = () => {
   return (
         <Container maxWidth="xl" fixed>
-          <Slide right>
              <Typography variant='body1' sx={{textAlign : 'center', color : '#E60263', fontSize : '14px', fontWeight : 'bold'}}>ارقامنا اهم مايميزنا</Typography>
-         </Slide>
-          <Slide left>
              <Typography variant='h1' sx={{textAlign : 'center', fontSize : '2rem', fontWeight : 'bold', position : 'relative'}} className='underline-service-title'> نحرص دائما علي ارضاء عملائنا </Typography>
-          </Slide>
           
          
          <Box sx={{margin : "100px 0px"}}>
@@ -37,12 +33,8 @@ const Distinguishes = () => {
                 return (
                         // eslint-disable-next-line react/jsx-key
                         <Grid item key={id} xs={12} md={3} sx={{textAlign : 'center', marginBottom : {xs : '50px', md : '0px'}}}>
-                           
-                              <Slide right>
                                 <Typography variant='h1' sx={{fontSize : '40px', color : '#E60263', marginBottom : '10px', fontWeight : 'bold'}}>{item.num}</Typography>
-                                <Typography variant='h1' sx={{fontSize : '16px', fontWeight : 'bold', color : '#808080'}}>{item.title}</Typography>
-                              </Slide>
-                             
+                                <Typography variant='h1' sx={{fontSize : '16px', fontWeight : 'bold', color : '#808080'}}>{item.title}</Typography>                             
                         </Grid>
                 )
             })}
