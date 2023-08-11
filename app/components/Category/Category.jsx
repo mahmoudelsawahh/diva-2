@@ -1,7 +1,7 @@
 "use client"
 import dynamic from 'next/dynamic';
 import { Box, Button, Container, Grid, Typography } from '@/app/lib/MuiSsr'
-import React, {Suspense, useState } from 'react'
+import React, {useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { baseUrl } from '@/app/lib/baseUrl';
@@ -37,19 +37,19 @@ const Category = () => {
   const slug = usePathname();
 
 
-  // useEffect(() => {
-  //   fetch(`${baseUrl}/rest/tables.article/getPosts`,{
-  //     method : 'POST',
-  //     headers : {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body : JSON.stringify({"id" : getId}),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setCategoryData(data.data)
-  //     })
-  // }, [getId])
+  useEffect(() => {
+    fetch(`${baseUrl}/rest/tables.article/getPosts`,{
+      method : 'POST',
+      headers : {
+        'Content-Type': 'application/json',
+      },
+      body : JSON.stringify({"id" : getId}),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setCategoryData(data.data)
+      })
+  }, [getId])
 
   return (
     <Box sx={{position : 'relative', height : '100%'}}>
@@ -78,8 +78,7 @@ const Category = () => {
      })}
   </Box>
   <Grid container spacing={3}>
-        {/* <Suspense fallback={<Loading/>}>
-        {
+         {categoryData ? 
           categoryData.map((item)=>{
             return (
               <Grid item xs={12} lg={4} key={item.id}>
@@ -92,8 +91,7 @@ const Category = () => {
             </Grid>
             )
           })
-         }
-        </Suspense> */}
+         : <Loading/>}
       </Grid>
                <Box sx={{display : slug === "/" ? "flex": "none", flexDirection : 'column', alignItems : 'center', margin : '50px 0px'}}>
                  <Button 
