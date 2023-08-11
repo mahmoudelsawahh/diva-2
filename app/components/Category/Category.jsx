@@ -1,7 +1,7 @@
 "use client"
 import dynamic from 'next/dynamic';
 import { Box, Button, Container, Grid, Typography } from '@/app/lib/MuiSsr'
-import React, {useState } from 'react'
+import React, {Suspense, useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { baseUrl } from '@/app/lib/baseUrl';
@@ -78,7 +78,8 @@ const Category = () => {
      })}
   </Box>
   <Grid container spacing={3}>
-         {categoryData ? 
+        <Suspense fallback={<Loading/>}>
+        {
           categoryData.map((item)=>{
             return (
               <Grid item xs={12} lg={4} key={item.id}>
@@ -91,7 +92,8 @@ const Category = () => {
             </Grid>
             )
           })
-         : <Loading/>}
+         }
+        </Suspense>
       </Grid>
                <Box sx={{display : slug === "/" ? "flex": "none", flexDirection : 'column', alignItems : 'center', margin : '50px 0px'}}>
                  <Button 
