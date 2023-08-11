@@ -1,9 +1,9 @@
+"use client"
 import dynamic from 'next/dynamic'
-import { getArticleData } from '../lib/DataFetching'
- 
+import LazyLoad from 'react-lazyload'
 const BlogTitle = dynamic(() => import('../components/blog-Page/BlogTitle'), {
 })
-const SubBlog = dynamic(() => import('../components/blog-Page/SubBlog'), {
+const BlogContainer = dynamic(() => import('../components/blog-Page/BlogContainer'), {
 })
 const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'), {
 })
@@ -15,17 +15,18 @@ const Footer = dynamic(() => import('@/app/components/footer/Footer'),{
   ssr : false
 });
 
-export default async function Blog (){
-  const data = await getArticleData();
+export default  function Blog (){
   return (
    <>
     <main>
     <section>
       <BlogTitle/>
     </section>
-    <section>
-             {/* <SubBlog data={data.data}/> */}
+      <LazyLoad height={"100%"} once>
+      <section>
+             <BlogContainer/>
     </section>
+      </LazyLoad>
     <section>
       <InstagramBanner/>
     </section>
