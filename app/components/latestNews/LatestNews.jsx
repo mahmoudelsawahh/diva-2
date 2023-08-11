@@ -9,25 +9,24 @@ import {useEffect, useState } from 'react';
 import { baseUrl } from '@/app/lib/baseUrl';
 const NewsCarsoul = dynamic(() => import('./NewsCarsoul'),{
   ssr : false,
-  loading: () => <div>Loading...</div>
  });
 
 const LatestNews = () => {
   const [data, setData] = useState(null)
 
-  useEffect(() => {
-    fetch(`${baseUrl}/rest/tables.article/getAllArticlesPojo`,{
-      method : 'POST',
-      headers : {
-        'Content-Type': 'application/json',
-      },
-      body : JSON.stringify({"id" : 0}),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data.data)
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch(`${baseUrl}/rest/tables.article/getAllArticlesPojo`,{
+  //     method : 'POST',
+  //     headers : {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body : JSON.stringify({"id" : 0}),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setData(data.data)
+  //     })
+  // }, [])
 
 
   return (
