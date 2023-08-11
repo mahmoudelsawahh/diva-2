@@ -1,4 +1,3 @@
-"use client"
 import {Box, Container, Typography} from '@/app/lib/MuiSsr';
 import Image from 'next/image';
 import divaBg from '/public/divanice.com_imgs_section-bg.webp'
@@ -7,28 +6,13 @@ import LazyLoad from 'react-lazyload';
 import dynamic from 'next/dynamic';
 import {useEffect, useState } from 'react';
 import { baseUrl } from '@/app/lib/baseUrl';
+import { getArticlePostData } from '@/app/lib/DataFetching';
 const NewsCarsoul = dynamic(() => import('./NewsCarsoul'),{
   ssr : false,
  });
 
-const LatestNews = () => {
-  const [data, setData] = useState(null)
-
-  // useEffect(() => {
-  //   fetch(`${baseUrl}/rest/tables.article/getAllArticlesPojo`,{
-  //     method : 'POST',
-  //     headers : {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body : JSON.stringify({"id" : 0}),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setData(data.data)
-  //     })
-  // }, [])
-
-
+const LatestNews = async () => {
+  const data = await getArticlePostData()
   return (
         <Box sx={{position : 'relative', height : '100%'}}>
          <LazyLoad height={"100%"} once>
@@ -43,7 +27,7 @@ const LatestNews = () => {
               <Typography variant='body1' sx={{fontSize : '14px', fontWeight : 'bold' , color : '#E60263', marginTop : '50px'}}>احدث اخبار ديفا</Typography>
               <Typography variant='h1' sx={{fontWeight : 'bold', position : 'relative', fontSize : '2rem', marginBottom : '60px'}} className='underline-service-title'  >احدث اخبار الموضة والجمال</Typography>
        <Box>
-                <NewsCarsoul data={data}/>
+                <NewsCarsoul data={data.data}/>
        </Box>
     </Container>
         <LazyLoad height={'100%'} once>

@@ -32,6 +32,25 @@ export async function getCategoryData() {
     return res.json()
   }
 
+  export async function getArticlePostData() {
+    const res = await fetch(`${baseUrl}/rest/tables.article/getAllArticlesPojo`,{
+      method : 'POST',
+      headers : {
+        'Content-Type': 'application/json',
+      },
+      body : JSON.stringify({"id" : 0}),
+      cache : 'no-store'
+    })
+    // Recommendation: handle errors
+    if (!res.ok) {
+      // This will activate the closest `error.js` Error Boundary
+      return <Loading/>
+    }
+   
+    return res.json()
+  }
+
+
   export async function getBlogData(param) {
     const res = await fetch(`${baseUrl}/rest/tables.article/getArticleDetails`,{
       method : 'POST',

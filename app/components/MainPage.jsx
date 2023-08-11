@@ -1,5 +1,6 @@
 "use client"
 import dynamic from 'next/dynamic';
+import LazyLoad from 'react-lazyload';
 const Distinguishes = dynamic(() => import('./Distinguishes/Distinguishes'),{
   ssr : false,
 });
@@ -21,9 +22,9 @@ const LatestNews = dynamic(() => import('./latestNews/LatestNews'),{
 const InstagramBanner = dynamic(() => import('./InstagramBanner/InstagramBanner'),{
   ssr : false,
 });
-// const Category = dynamic(() => import('./Category/Category'),{
-//   ssr : false,
-// });
+const Category = dynamic(() => import('./Category/Category'),{
+  ssr : false,
+});
 const MainPage = () => {
   return (
     <>
@@ -39,15 +40,19 @@ const MainPage = () => {
       <section>
         <DevaStudioVideo/>
       </section>
-      {/* <section>
+      <LazyLoad height={"500px"} once>
+      <section>
        <Category/>
-      </section> */}
+      </section>
+      </LazyLoad>
       <section>
         <Distinguishes/>
       </section>
-      <section>
+       <LazyLoad height={"500px"} once>
+       <section>
        <LatestNews/>
       </section>
+       </LazyLoad>
       <section>
         <InstagramBanner/>
       </section>

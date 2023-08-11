@@ -24,7 +24,8 @@ const NewsCarsoul = ({data}) => {
         <div className="embla-iframe-video">
     <div className="embla-iframe-video__viewport" ref={emblaRef}>
       <div className="embla-iframe-video__container">
-       {data ? data.map((item , id)=>{
+       <Suspense fallback={<Loading/>}>
+       {data.map((item , id)=>{
             return (
                 <Box className="embla-iframe-video__slide" key={id} sx={{flex : {xs :  '0 0 100%' , md :  '0 0 50%' , lg :  '0 0 33.3%'} }}>
                     <div className='embla-iframe-video__slide__img'>
@@ -50,7 +51,8 @@ const NewsCarsoul = ({data}) => {
                     </div>
                 </Box>
             )
-          }) : <Loading/>}
+          })}
+       </Suspense>
       </div>
     </div>
   </div>
