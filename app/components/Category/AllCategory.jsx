@@ -1,6 +1,6 @@
 "use client"
 import dynamic from 'next/dynamic';
-import { Box, Button, Container, Grid, Typography, Slide } from '@/app/lib/MuiSsr'
+import { Box, Button, Container, Grid, Typography } from '@/app/lib/MuiSsr'
 import React, { Suspense, useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
@@ -58,14 +58,9 @@ const AllCategory = ({CategoryData}) => {
            <Image loading='lazy' src={divaBg} alt='ما الذي نقدمه من خدمات ؟' layout='responsive' objectFit='cover' className='image-responsive'/>
            </LazyLoad>
        <Box sx={{position : 'absolute', width : '100%', height : '100%', backgroundColor : 'rgba(254, 245, 246, .85)',  top : 0 , left : 0  }}></Box>
-          
-
        <Container maxWidth="lg" sx={{textAlign : 'center', padding : '40px'}}>
-        <Slide bottom>
               <Typography variant='subtitle1' sx={{fontSize : '14px', fontWeight : 'bold' , color : '#E60263', marginTop : '50px'}}>المعرض </Typography>
               <Typography variant='h1' sx={{fontWeight : 'bold', position : 'relative', fontSize : '2rem', marginBottom : '60px'}} className='underline-service-title' >من اهم مايميزنا هو معرضنا </Typography>
-        </Slide>
-        <Slide right>
   <Box sx={{display : "flex",flexWrap : 'wrap', justifyContent : 'center', alignItems : 'center', margin : '50px 0px'}} className="category-content">
      {data.map((item)=>{
          return (
@@ -80,7 +75,6 @@ const AllCategory = ({CategoryData}) => {
          )
      })}
   </Box>
-  </Slide>
   <Grid container spacing={3}>
          <Suspense fallback={<Loading/>}>
          { 
@@ -88,12 +82,10 @@ const AllCategory = ({CategoryData}) => {
             return (
               <Grid item xs={12} lg={4} key={item.id}>
            <LazyLoad height={"100%"} once>
-           <Slide bottom>
           <Box sx={{display : 'flex', justifyContent : 'space-between', alignItems : 'baseline', flexDirection : 'column', position : 'relative', height : '380px'}}>
           <Image onClick={()=> router.push(`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`)} className='category-list' src={`${baseUrl}/images?id=${item.imageId}`} fill alt={item.name} style={{ border : '10px solid #fff', minHeight : '350px'}} loading='lazy' />
           </Box>
               <Link aria-label='هدفنا الأول والأخير هو جعلك تبرزين جمالك بوضع المكياج الذي يليق بكِ.' style={{ textAlign : 'center', width : '100%' , fontSize : '18px', fontWeight : 'bold', padding : '20px'}} className='category-link' href={`/gallery/${item.id}/${item.name.replace(/\s+/g, '-')}`}>{item.name}</Link>
-              </Slide>
            </LazyLoad>
             </Grid>
             )
