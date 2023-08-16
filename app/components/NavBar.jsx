@@ -45,9 +45,9 @@ export default function DrawerAppBar(props) {
       <> 
          {navbarData.map((item , id)=>{
             return (
-                <Button component="div"  key={id} aria-label='مركز تجميل عرائس وميك اب Diva' onClick={()=> router.push(item.slug)}
+                <Button  key={id} aria-label='مركز تجميل عرائس وميك اب Diva' onClick={()=> router.push(item.slug)}
              className={currentRoute === "/" ? "active" : "no-active"  }
-             title={item.title}
+             title={item.title} role='link' name="link"
             style={{fontWeight : 'bold' , margin : '10px 20px', fontSize : '18px', color : '#000'}}
              >
                     {item.title} 
